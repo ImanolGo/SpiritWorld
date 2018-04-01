@@ -32,6 +32,7 @@
                 <item>content:test</item>
                 <item>content:color</item>
                 <item>content:syphonIn</item>
+                <item>content:Virtual_controller_to_wifi.py</item>
             </items>
             <parameters>
                 <is_3D type="bool">0</is_3D>
@@ -520,6 +521,37 @@
                 <Syphon_Pipe type="stringoption">ProtoPixelSyphon-&gt;WindDressSyphon</Syphon_Pipe>
             </parameters>
             <transformation type="matrix4x4">0.478297,        0,        0,        0&#x0A;       0, 0.837424,        0,        0&#x0A;       0,        0,        1,        0&#x0A;-0.12302, 0.717289,        0,        1</transformation>
+        </content>
+        <content>
+            <name>Virtual_controller_to_wifi.py</name>
+            <type>PythonProgram</type>
+            <parameters>
+                <enabled type="bool">1</enabled>
+                <blend_mode type="stringoption">alpha</blend_mode>
+                <color_levels type="color">255, 255, 255, 255</color_levels>
+                <projection_type type="stringoption">flatsimple</projection_type>
+                <projection_parameters>
+                    <width type="float">1</width>
+                    <height type="float">1</height>
+                </projection_parameters>
+                <python_script type="filepath">$PROJECT_DIR/Virtual_controller_to_wifi.py</python_script>
+                <params>
+                    <FPS_LIMIT type="int">30</FPS_LIMIT>
+                    <Controller1 type="bool">0</Controller1>
+                    <audio_react1 type="bool">0</audio_react1>
+                    <IP_1 type="string">192.168.133.20</IP_1>
+                    <Controller2 type="bool">0</Controller2>
+                    <audio_react2 type="bool">0</audio_react2>
+                    <IP_2 type="string">192.168.133.21</IP_2>
+                    <Controller3 type="bool">0</Controller3>
+                    <audio_react3 type="bool">0</audio_react3>
+                    <IP_3 type="string">192.168.133.22</IP_3>
+                    <Controller4 type="bool">0</Controller4>
+                    <audio_react4 type="bool">0</audio_react4>
+                    <IP_4 type="string">192.168.133.23</IP_4>
+                </params>
+            </parameters>
+            <transformation type="matrix4x4">0.0832641,        0,        0,        0&#x0A;       0, 0.0714388,        0,        0&#x0A;       0,        0,        1,        0&#x0A;-0.120917,  1.25001,        0,        1</transformation>
         </content>
     </contents>
     <groups></groups>

@@ -41,6 +41,8 @@
 #endif
 
 #define LED_PIN    4
+//#define DATA_PIN_1    12
+//#define DATA_PIN_2    18
 #define DATA_PIN_1    27
 #define DATA_PIN_2    18
 #define LED_TYPE    WS2812B
@@ -66,8 +68,9 @@ unsigned long now = 0; //current time value
 char ssid[] = "TP-LINK_54E4"; //  your network SSID (name)
 char pass[] = "27155332";    // your network password (use for WPA, or use as key for WEP)
 
-//char ssid[] = "TP-Link_9528"; //  your network SSID (name)
-//char pass[] = "15419699";    // your network password (use for WPA, or use as key for WEP)
+//const char ssid[]     = "Don't worry, be happy!";
+//const char pass[] = "whyistheskysohigh?";
+
 
 IPAddress ip(192, 168, 0, 21); //  Fixed IP
 IPAddress gateway(192, 168, 0, 1); // set gateway to match your network
@@ -76,8 +79,6 @@ IPAddress subnet(255, 255, 255, 0); // set subnet mask to match your network
 //Are we currently connected?
 boolean connected = false;
 
-//const char* ssid     = "Don't worry, be happy!";
-//const char* password = "whyistheskysohigh?";
 
 WiFiUDP Udp;
 
@@ -89,7 +90,7 @@ void setup()
   setupSerial();
   setupWifi();
   setupLeds();
-  initTest(); //test to make sure pixels are working
+  //initTest(); //test to make sure pixels are working
 }
 
 void setupSerial() {
@@ -103,15 +104,15 @@ void setupSerial() {
 
 void setupWifi() {
 
-//  initializeWifi();
+   initializeWifi();
 //  
 //  // Print WiFi MAC address:
 //  printMacAddress();
 //
-   connectWifi();
+   //connectWifi();
 //  printWiFiStatus();
 
-  //connectToWiFi(ssid, pass);
+  connectToWiFi(ssid, pass);
   
 }
 
@@ -169,13 +170,10 @@ void connectWifi() {
    DEBUG_PRINT("Attempting to connect to SSID: ");
    DEBUG_PRINT_LN(ssid);
 
-  WiFi.config(ip, gateway, subnet);
-  WiFi.setAutoReconnect(true);
-  WiFi.setAutoConnect(true);
+//  WiFi.config(ip, gateway, subnet);
+//  WiFi.setAutoReconnect(true);
+//  WiFi.setAutoConnect(true);
   WiFi.begin(ssid, pass);
-
-
-  
          
   
   while (WiFi.status() != WL_CONNECTED) 
