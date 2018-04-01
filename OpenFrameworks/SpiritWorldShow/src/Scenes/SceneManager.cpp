@@ -60,6 +60,10 @@ void SceneManager::createScenes()
     scene = ofPtr<ofxScene> (new WaterScene());
     m_mySceneManager.addScene(scene);
     
+    //Create Mesh Scene
+    scene = ofPtr<ofxScene> (new MeshScene());
+    m_mySceneManager.addScene(scene);
+    
 
     
     float width = AppManager::getInstance().getSettingsManager().getAppWidth();

@@ -11,3 +11,4 @@
 #include "BlankScene.h"
 #include "VideoScene.h"
 #include "WaterScene.h"
+#include "MeshScene.h"
