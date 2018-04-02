@@ -12,3 +12,4 @@
 #include "VideoScene.h"
 #include "WaterScene.h"
 #include "MeshScene.h"
+#include "WireFrameScene.h"
