@@ -13,3 +13,4 @@
 #include "WaterScene.h"
 #include "MeshScene.h"
 #include "WireFrameScene.h"
+#include "DotsScene.h"

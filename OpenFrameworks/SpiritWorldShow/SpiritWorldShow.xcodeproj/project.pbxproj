@@ -16,6 +16,7 @@
 		08E4B10920716E6B008F5379 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08E4B10820716E6B008F5379 /* Syphon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		08E4B110207177FA008F5379 /* MeshScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08E4B10E207177FA008F5379 /* MeshScene.cpp */; };
 		08E4B11320718164008F5379 /* WireFrameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08E4B11120718163008F5379 /* WireFrameScene.cpp */; };
+		08E4B11720724321008F5379 /* DotsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08E4B11620724321008F5379 /* DotsScene.cpp */; };
 		0C8E6109528865C738BFD818 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A78388489306C3277E37BA4F /* SyphonNameboundClient.m */; };
 		0F56099006231FBD6C72DED8 /* license.md in Sources */ = {isa = PBXBuildFile; fileRef = 1B189168F182CE09D77DEF2D /* license.md */; };
 		12451834526FB5CD4EA0D0DF /* ofxSceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3B778D8F951EC700B066390 /* ofxSceneManager.cpp */; };
@@ -161,6 +162,8 @@
 		08E4B10F207177FA008F5379 /* MeshScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeshScene.h; path = Scenes/MeshScene.h; sourceTree = "<group>"; };
 		08E4B11120718163008F5379 /* WireFrameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WireFrameScene.cpp; path = Scenes/WireFrameScene.cpp; sourceTree = "<group>"; };
 		08E4B11220718163008F5379 /* WireFrameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WireFrameScene.h; path = Scenes/WireFrameScene.h; sourceTree = "<group>"; };
+		08E4B11520724321008F5379 /* DotsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DotsScene.h; path = Scenes/DotsScene.h; sourceTree = "<group>"; };
+		08E4B11620724321008F5379 /* DotsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DotsScene.cpp; path = Scenes/DotsScene.cpp; sourceTree = "<group>"; };
 		09BB1D7613A1F9D8E8B11D7A /* KeyboardManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = KeyboardManager.h; path = src/I0/KeyboardManager.h; sourceTree = SOURCE_ROOT; };
 		09F8F2DF1D53E65319F30B96 /* LightManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LightManager.cpp; path = src/Engine/3D/LightManager.cpp; sourceTree = SOURCE_ROOT; };
 		0A6646403E6DFC818C11E70D /* ofxFBM.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxFBM.h; path = src/Addons/ofxFX/src/generative/ofxFBM.h; sourceTree = SOURCE_ROOT; };
@@ -997,6 +1000,8 @@
 				08E4B10F207177FA008F5379 /* MeshScene.h */,
 				08E4B11120718163008F5379 /* WireFrameScene.cpp */,
 				08E4B11220718163008F5379 /* WireFrameScene.h */,
+				08E4B11620724321008F5379 /* DotsScene.cpp */,
+				08E4B11520724321008F5379 /* DotsScene.h */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1389,6 +1394,7 @@
 				68A59FFAF8D6A1C715A69CD4 /* EngineFont.cpp in Sources */,
 				3A6C7D72771284673CBE247D /* ImageVisual.cpp in Sources */,
 				F7EA3801298F5E54967C119B /* ImageVisual3D.cpp in Sources */,
+				08E4B11720724321008F5379 /* DotsScene.cpp in Sources */,
 				DEBDF1F781CA34214BEBD185 /* RectangleVisual.cpp in Sources */,
 				8BC3D4AABDF5E655706BA3B8 /* SvgVisual.cpp in Sources */,
 				DB05E98D002D6650AA23E87B /* TextVisual.cpp in Sources */,
