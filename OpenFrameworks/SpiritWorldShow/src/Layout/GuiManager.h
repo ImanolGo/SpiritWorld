@@ -24,6 +24,7 @@ class GuiManager: public Manager
 {
     static const string GUI_SETTINGS_FILE_NAME;
     static const string GUI_SETTINGS_NAME;
+    static const string PRESETS_PREFIX;
     static const int GUI_WIDTH;
     
 public:
@@ -80,11 +81,25 @@ public:
     
     void onMatrixEvent(ofxDatGuiMatrixEvent e);
     
+    void savePresetsValues(const string& sceneName);
+    
+    void loadPresetsValues(const string& sceneName);
+    
+    float getSpeed(){return m_speed;}
+    
+    float getSize(){return m_size;}
+    
+    float getHue(){return m_hue;}
+    
+    float getAlpha(){return m_alpha;}
+    
 private:
     
     void setupGuiParameters();
     
     void setupScenesGui();
+    
+    void setupPresetsGui();
     
     void setupGuiEvents();
     
@@ -97,8 +112,13 @@ private:
     ofxDatGui               m_gui;
     
     ofParameterGroup        m_parameters;
+    ofParameterGroup        m_presets;
     
     ofParameter<float>      m_sceneTransitionTime;
+    ofParameter<float>      m_speed;
+    ofParameter<float>      m_size;
+    ofParameter<float>      m_hue;
+    ofParameter<float>      m_alpha;
     
    
     bool        m_showGui;  //It defines the whether the gui should be shown or not

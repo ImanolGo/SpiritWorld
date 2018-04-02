@@ -12,7 +12,7 @@
 
 MeshScene::MeshScene(): ofxScene("MESH"), m_meshWidth(12) ,m_meshHeight(10)
 {
-    //Intentionally left empty
+     this->setupMesh();
 }
 
 MeshScene::~MeshScene()
@@ -23,7 +23,7 @@ MeshScene::~MeshScene()
 
 void MeshScene::setup() {
     ofLogNotice(getName() + "::setup");
-    this->setupMesh();
+   
 }
 
 void MeshScene::setupMesh()
@@ -67,7 +67,10 @@ void MeshScene::update()
 void MeshScene::updateMesh()
 {
   // auto color = AppManager::getInstance().getSettingsManager().getColor("GOLD");
-
+    
+    float timeScale = AppManager::getInstance().getGuiManager().getSpeed();
+    float size = AppManager::getInstance().getGuiManager().getSize();
+    size = ofMap(size, 0.0, 1.0, 0.0, 300);
     
     //Change vertices
     for (int y=0; y< m_meshHeight; y++) {
@@ -78,10 +81,10 @@ void MeshScene::updateMesh()
             ofPoint p = m_mesh.getVertex( i );
             
             //Change z-coordinate of vertex
-            float noise =  ofNoise(x * 0.5, y * 0.5, ofGetElapsedTimef() * 0.2);
-            p.z = ofMap(noise, 0.0, 1.0, -50, 50);
+            float noise =  ofNoise(x * 0.5, y * 0.5, ofGetElapsedTimef() * timeScale);
+            p.z = ofMap(noise, 0.0, 1.0, 0.0, size);
             m_mesh.setVertex( i, p );
-            float brightness = ofMap(noise, 0.2, 1.0, 0, 255,true);
+            float brightness = ofMap(noise, 0.3, 1.0, 0, 255,true);
             auto color = AppManager::getInstance().getSettingsManager().getColor("GOLD");
             color.setBrightness(brightness);
             m_mesh.setColor(i ,color);
@@ -118,6 +121,7 @@ void MeshScene::drawMesh()
 
 void MeshScene::willFadeIn() {
      ofLogNotice("MeshScene::willFadeIn");
+     AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
 }
 
 void MeshScene::willDraw() {
@@ -126,6 +130,7 @@ void MeshScene::willDraw() {
 
 void MeshScene::willFadeOut() {
     ofLogNotice("MeshScene::willFadeOut");
+    AppManager::getInstance().getGuiManager().savePresetsValues(getName());
 }
 
 void MeshScene::willExit() {

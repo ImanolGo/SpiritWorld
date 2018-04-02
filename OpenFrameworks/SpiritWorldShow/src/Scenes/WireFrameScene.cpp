@@ -29,14 +29,11 @@ void Particle::setup()
 
 void Particle::update()
 {   
-//    float width = AppManager::getInstance().getSettingsManager().getAppWidth();
-//    float height = AppManager::getInstance().getSettingsManager().getAppHeight();
-//
-//    m_position.x = ofRandom(width);
-//    m_position.y = ofRandom(height);
-//
-        m_position.x += m_speed.x;
-        m_position.y += m_speed.y;
+        float timeScale = AppManager::getInstance().getGuiManager().getSpeed();
+        timeScale = ofMap(timeScale, 0.0, 1.0, 0.0, 5.0);
+    
+        m_position.x += m_speed.x*timeScale;
+        m_position.y += m_speed.y*timeScale;
     
         this->stayOnScreen();
 }
@@ -74,7 +71,8 @@ void Particle::draw()
 
 WireFrameScene::WireFrameScene(): ofxScene("WIREFRAME"), m_radius(100), m_velocity(0.3), m_distanceThreshold(10)
 {
-    //Intentionally left empty
+    this->setupFbo();
+    this->setupParticles();
 }
 
 WireFrameScene::~WireFrameScene()
@@ -85,8 +83,7 @@ WireFrameScene::~WireFrameScene()
 
 void WireFrameScene::setup() {
     ofLogNotice(getName() + "::setup");
-    this->setupFbo();
-    this->setupParticles();
+    
 }
 
 void WireFrameScene::setupFbo()
@@ -130,10 +127,8 @@ void WireFrameScene::update()
 
 void WireFrameScene::updateParticles()
 {
-    double dt = ofGetLastFrameTime();
     float width = AppManager::getInstance().getSettingsManager().getAppWidth();
     float height = AppManager::getInstance().getSettingsManager().getAppHeight();
-    
     
     for (int i = 4; i < m_particles.size(); i++)
     {
@@ -168,9 +163,12 @@ void WireFrameScene::draw()
 
 void WireFrameScene::drawParticles()
 {
+    float size = AppManager::getInstance().getGuiManager().getSize();
+    size = ofMap(size, 0.0, 1.0, 0.0, 10.0);
+    
     ofPushStyle();
     ofSetColor(255);
-    ofSetLineWidth(2);
+    ofSetLineWidth(size);
     
     for (int j=0; j < m_particles.size(); j++)
     {
@@ -192,6 +190,7 @@ void WireFrameScene::drawParticles()
 
 void WireFrameScene::willFadeIn() {
      ofLogNotice("WireFrameScene::willFadeIn");
+     AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
 }
 
 void WireFrameScene::willDraw() {
@@ -200,6 +199,7 @@ void WireFrameScene::willDraw() {
 
 void WireFrameScene::willFadeOut() {
     ofLogNotice("WireFrameScene::willFadeOut");
+    AppManager::getInstance().getGuiManager().savePresetsValues(getName());
 }
 
 void WireFrameScene::willExit() {

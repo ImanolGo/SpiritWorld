@@ -44,7 +44,8 @@ void SceneManager::setup()
 
 void SceneManager::createScenes()
 {
-    m_mySceneManager.setTransitionDissolve();
+    m_mySceneManager.setTransitionFade();
+    //m_mySceneManager.setTransitionDissolve();
     
     ofPtr<ofxScene> scene;
 
@@ -78,7 +79,8 @@ void SceneManager::createScenes()
 
     
     m_mySceneManager.run(width, height);
-    this->onTransitionTimeChange(2.0);
+    float time = 2.0;
+    this->onTransitionTimeChange(time);
 }
 
 
@@ -136,7 +138,7 @@ void SceneManager::changeScene(int sceneIndex)
 }
 
 
-void SceneManager::onTransitionTimeChange(float value)
+void SceneManager::onTransitionTimeChange(float& value)
 {
    m_mySceneManager.setSceneDuration(value,value);
 }

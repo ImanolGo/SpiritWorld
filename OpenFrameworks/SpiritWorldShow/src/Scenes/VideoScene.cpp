@@ -12,7 +12,7 @@
 
 VideoScene::VideoScene(std::string name): ofxScene(name)
 {
-    //Intentionally left empty
+   this->setupVideo();
 }
 
 VideoScene::~VideoScene()
@@ -23,7 +23,7 @@ VideoScene::~VideoScene()
 
 void VideoScene::setup() {
     ofLogNotice(getName() + "::setup");
-    this->setupVideo();
+    //this->setupVideo();
 }
 
 void VideoScene::setupVideo()

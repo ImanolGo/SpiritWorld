@@ -12,7 +12,7 @@
 
 WaterScene::WaterScene(): ofxScene("WATER")
 {
-    //Intentionally left empty
+   this->setupShader();
 }
 
 WaterScene::~WaterScene()
@@ -23,7 +23,7 @@ WaterScene::~WaterScene()
 
 void WaterScene::setup() {
     ofLogNotice(getName() + "::setup");
-    this->setupShader();
+    
 }
 
 void WaterScene::setupShader()
@@ -58,10 +58,12 @@ void WaterScene::drawShader()
 {
     float width = AppManager::getInstance().getSettingsManager().getAppWidth();
     float height = AppManager::getInstance().getSettingsManager().getAppHeight();
+    float timeScale = AppManager::getInstance().getGuiManager().getSpeed();
+    timeScale = ofMap(timeScale, 0.0, 1.0, 0.0, 2.0, true);
 
     m_shader.begin();
     m_shader.setUniform3f("iResolution", ofGetWidth(), ofGetHeight(), 0.0);
-    m_shader.setUniform1f("iTime", ofGetElapsedTimef());
+    m_shader.setUniform1f("iTime", ofGetElapsedTimef()*timeScale);
     
         ofRect(0, 0, width, height);
     
@@ -71,6 +73,7 @@ void WaterScene::drawShader()
 
 void WaterScene::willFadeIn() {
      ofLogNotice("WaterScene::willFadeIn");
+     AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
 }
 
 void WaterScene::willDraw() {
@@ -79,6 +82,7 @@ void WaterScene::willDraw() {
 
 void WaterScene::willFadeOut() {
     ofLogNotice("WaterScene::willFadeOut");
+    AppManager::getInstance().getGuiManager().savePresetsValues(getName());
 }
 
 void WaterScene::willExit() {

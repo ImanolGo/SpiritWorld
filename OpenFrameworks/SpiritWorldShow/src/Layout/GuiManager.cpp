@@ -16,6 +16,7 @@
 
 const string GuiManager::GUI_SETTINGS_FILE_NAME = "xmls/GuiSettings.xml";
 const string GuiManager::GUI_SETTINGS_NAME = "SHOW";
+const string GuiManager::PRESETS_PREFIX = "xmls/Presets_";
 const int GuiManager::GUI_WIDTH = 350;
 
 
@@ -40,6 +41,7 @@ void GuiManager::setup()
 
     this->setupGuiParameters();
     this->setupScenesGui();
+    this->setupPresetsGui();
     this->setupGuiEvents();
     this->loadGuiValues();
     
@@ -73,6 +75,38 @@ void GuiManager::setupGuiParameters()
     
     m_gui.addBreak();
     
+}
+
+void GuiManager::setupPresetsGui()
+{
+    auto layoutManager = &AppManager::getInstance().getLayoutManager();
+    auto sceneManager = &AppManager::getInstance().getSceneManager();
+    
+    m_sceneTransitionTime.set("TransitionTime", 0.5, 0.0, 3.0);
+    m_sceneTransitionTime.addListener(sceneManager, &SceneManager::onTransitionTimeChange);
+    m_parameters.add(m_sceneTransitionTime);
+    
+    m_speed.set("Speed", 0.5, 0.0, 1.0);
+    m_presets.add(m_speed);
+    
+    m_size.set("Size", 0.5, 0.0, 1.0);
+    m_presets.add(m_size);
+    
+    m_hue.set("Hue", 0.0, 0.0, 360.0);
+    m_presets.add(m_hue);
+    
+    m_alpha.set("Alpha", 1.0, 0.0, 1.0);
+    m_presets.add(m_alpha);
+    
+    
+    ofxDatGuiFolder* folder = m_gui.addFolder("GENERAL", ofColor::purple);
+    folder->addSlider(m_sceneTransitionTime);
+    folder->addSlider(m_speed);
+    folder->addSlider(m_size);
+    folder->addSlider(m_hue);
+    folder->addSlider(m_alpha);
+    folder->expand();
+    m_gui.addBreak();
 }
 
 
@@ -139,6 +173,26 @@ void GuiManager::loadGuiValues()
 {
     ofXml xml(GUI_SETTINGS_FILE_NAME);
     xml.deserialize(m_parameters);
+}
+
+void GuiManager::savePresetsValues(const string& sceneName)
+{
+    ofXml xml;
+    xml.serialize(m_presets);
+    string xmlName = PRESETS_PREFIX + sceneName +".xml";
+    xml.save(xmlName);
+    
+    ofLogNotice() <<"GuiManager::savePresetsValues -> " << xmlName;
+}
+
+void GuiManager::loadPresetsValues(const string& sceneName)
+{
+    ofXml xml;
+    string xmlName = PRESETS_PREFIX + sceneName +".xml";
+    xml.load(xmlName);
+    xml.deserialize(m_presets);
+    
+    ofLogNotice() <<"GuiManager::loadPresetsValues -> " << xmlName;
 }
 
 

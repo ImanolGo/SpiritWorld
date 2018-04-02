@@ -33,11 +33,11 @@ void Dot::setupImage()
 {
     m_dotVisual.setResource("Brush");
     m_dotVisual.setCentred(true);
-    int size = 100;
+    int size = 500;
     m_dotVisual.setWidth(size, true);
     
     m_dotVisual.setPosition(m_position);
-    m_dotVisual.setColor(ofColor(9, 9,255));
+    m_dotVisual.setColor(ofColor(5, 5,255));
     if(ofRandom(1.0) < 0.2){
         m_dotVisual.setColor(ofColor::white);
     }
@@ -45,11 +45,18 @@ void Dot::setupImage()
 
 void Dot::update()
 {
-    m_position.x += m_speed.x;
-    m_position.y += m_speed.y;
+    float timeScale = AppManager::getInstance().getGuiManager().getSpeed();
+    timeScale = ofMap(timeScale, 0.0, 1.0, 0.0, 5.0);
+    
+    m_position.x += m_speed.x*timeScale;
+    m_position.y += m_speed.y*timeScale;
 
     this->stayOnScreen();
     m_dotVisual.setPosition(m_position);
+    
+    
+    float scale = AppManager::getInstance().getGuiManager().getSize();
+     m_dotVisual.setScale(ofVec3f(scale));
 }
 
 void Dot::stayOnScreen()
@@ -76,7 +83,8 @@ void Dot::draw()
 
 DotsScene::DotsScene(): ofxScene("DOTS")
 {
-    //Intentionally left empty
+    this->setupFbo();
+    this->setupParticles();
 }
 
 DotsScene::~DotsScene()
@@ -87,8 +95,7 @@ DotsScene::~DotsScene()
 
 void DotsScene::setup() {
     ofLogNotice(getName() + "::setup");
-    this->setupFbo();
-    this->setupParticles();
+   
 }
 
 void DotsScene::setupFbo()
@@ -172,7 +179,8 @@ void DotsScene::drawParticles()
 }
 
 void DotsScene::willFadeIn() {
-     ofLogNotice("DotsScene::willFadeIn");
+    ofLogNotice("DotsScene::willFadeIn");
+    AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
 }
 
 void DotsScene::willDraw() {
@@ -181,6 +189,7 @@ void DotsScene::willDraw() {
 
 void DotsScene::willFadeOut() {
     ofLogNotice("DotsScene::willFadeOut");
+    AppManager::getInstance().getGuiManager().savePresetsValues(getName());
 }
 
 void DotsScene::willExit() {
