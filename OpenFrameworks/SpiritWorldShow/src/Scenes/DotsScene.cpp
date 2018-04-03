@@ -37,10 +37,11 @@ void Dot::setupImage()
     m_dotVisual.setWidth(size, true);
     
     m_dotVisual.setPosition(m_position);
-    m_dotVisual.setColor(ofColor(5, 5,255));
-    if(ofRandom(1.0) < 0.2){
-        m_dotVisual.setColor(ofColor::white);
-    }
+    m_dotVisual.setColor(ofColor::white);
+//    m_dotVisual.setColor(ofColor(5, 5,255));
+//    if(ofRandom(1.0) < 0.2){
+//        m_dotVisual.setColor(ofColor::white);
+//    }
 }
 
 void Dot::update()
@@ -150,7 +151,7 @@ void DotsScene::updateFbo()
     
     ofEnableAlphaBlending();
     m_fbo.begin();
-        ofSetColor(0, 0, 0, 5);
+        ofSetColor(0, 0, 0, 2);
         ofDrawRectangle(0, 0, width, height);
         ofSetColor(255);
          this->drawParticles();

@@ -231,10 +231,19 @@ void LayoutManager::drawText()
 
 void LayoutManager::drawFbo()
 {
+    auto hue = AppManager::getInstance().getGuiManager().getHue();
+    auto brightness = AppManager::getInstance().getGuiManager().getBrightness();
+    auto saturation = AppManager::getInstance().getGuiManager().getSaturation();
+    ofColor color; color.setHsb(hue, saturation, brightness);
+    
+    brightness = ofMap(brightness, 0.0, 1.0, 0, 255);
+    
+    
     
     ofEnableAlphaBlending();
     m_fbo.begin();
     ofClear(0, 0, 0);
+    ofSetColor(color);
     AppManager::getInstance().getSceneManager().draw();
     
     m_fbo.end();

@@ -51,8 +51,11 @@ void VideoScene::update()
 
 void VideoScene::updateVideo()
 {
+
     if(m_videoPlayer.isInitialized() && m_videoPlayer.isLoaded())
     {
+        auto speed = AppManager::getInstance().getGuiManager().getSpeed();
+        m_videoPlayer.setSpeed(speed);
         m_videoPlayer.update();
     }
 }

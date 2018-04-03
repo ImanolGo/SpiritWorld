@@ -65,11 +65,11 @@ volatile byte currentcounter = 0; //counter for data reception
 byte previouscounter = 0; //counter for data reception 
 unsigned long now = 0; //current time value
 
-char ssid[] = "TP-LINK_54E4"; //  your network SSID (name)
-char pass[] = "27155332";    // your network password (use for WPA, or use as key for WEP)
+//char ssid[] = "TP-LINK_54E4"; //  your network SSID (name)
+//char pass[] = "27155332";    // your network password (use for WPA, or use as key for WEP)
 
-//const char ssid[]     = "Don't worry, be happy!";
-//const char pass[] = "whyistheskysohigh?";
+const char ssid[]     = "TP-Link_9528";
+const char pass[] = "15419699";
 
 
 IPAddress ip(192, 168, 0, 21); //  Fixed IP

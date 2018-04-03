@@ -498,7 +498,7 @@
                     <height type="float">1</height>
                 </projection_parameters>
                 <params>
-                    <color type="color">31, 27, 116, 255</color>
+                    <color type="color">85, 15, 116, 255</color>
                 </params>
             </parameters>
             <transformation type="matrix4x4">0.583166,        0,        0,        0&#x0A;       0, 0.961769,        0,        0&#x0A;       0,        0,        1,        0&#x0A;-0.119682, 0.708101,        0,        1</transformation>
@@ -507,7 +507,7 @@
             <name>syphonIn</name>
             <type>SyphonPipe</type>
             <parameters>
-                <enabled type="bool">1</enabled>
+                <enabled type="bool">0</enabled>
                 <blend_mode type="stringoption">alpha</blend_mode>
                 <color_levels type="color">255, 255, 255, 255</color_levels>
                 <projection_type type="stringoption">flatsimple</projection_type>
@@ -537,9 +537,9 @@
                 <python_script type="filepath">$PROJECT_DIR/Virtual_controller_to_wifi.py</python_script>
                 <params>
                     <FPS_LIMIT type="int">30</FPS_LIMIT>
-                    <Controller1 type="bool">0</Controller1>
+                    <Controller1 type="bool">1</Controller1>
                     <audio_react1 type="bool">0</audio_react1>
-                    <IP_1 type="string">192.168.133.20</IP_1>
+                    <IP_1 type="string">192.168.0.168</IP_1>
                     <Controller2 type="bool">0</Controller2>
                     <audio_react2 type="bool">0</audio_react2>
                     <IP_2 type="string">192.168.133.21</IP_2>
@@ -561,9 +561,9 @@
             <type>ProtoPixel</type>
             <parameters>
                 <connected type="bool">1</connected>
-                <outlets type="customint">4</outlets>
-                <Device type="string">33:30:3a:41:45:3a</Device>
-                <device_data type="string">{ &quot;mac_addr&quot; : &quot;33:30:3a:41:45:3a&quot; }</device_data>
+                <outlets type="customint">2</outlets>
+                <Device type="string">00:00:00:00:00:00</Device>
+                <device_data type="string">{&#x0A;   &quot;mac_addr&quot; : &quot;00:00:00:00:00:00&quot;&#x0A;}&#x0A;</device_data>
             </parameters>
             <outlets>
                 <outlet>
@@ -599,16 +599,6 @@
                             <item>fixture:Red13</item>
                             <item>fixture:Red14</item>
                         </items>
-                    </fixtures>
-                </outlet>
-                <outlet>
-                    <fixtures>
-                        <items></items>
-                    </fixtures>
-                </outlet>
-                <outlet>
-                    <fixtures>
-                        <items></items>
                     </fixtures>
                 </outlet>
             </outlets>

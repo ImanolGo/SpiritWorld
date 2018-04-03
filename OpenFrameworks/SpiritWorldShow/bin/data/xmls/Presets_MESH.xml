@@ -1,6 +1,7 @@
 <group>
-	<Speed>0.2</Speed>
+	<Speed>0.59</Speed>
 	<Size>0.5</Size>
+	<Brightness>1</Brightness>
 	<Hue>0</Hue>
 	<Alpha>1</Alpha>
 </group>

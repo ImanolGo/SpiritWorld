@@ -92,8 +92,14 @@ void GuiManager::setupPresetsGui()
     m_size.set("Size", 0.5, 0.0, 1.0);
     m_presets.add(m_size);
     
-    m_hue.set("Hue", 0.0, 0.0, 360.0);
+    m_brightness.set("Brightness", 255.0, 0.0, 255.0);
+    m_presets.add(m_brightness);
+    
+    m_hue.set("Hue", 0.0, 0.0, 255.0);
     m_presets.add(m_hue);
+    
+    m_saturation.set("Saturation", 0.0, 0.0, 255.0);
+    m_presets.add(m_saturation);
     
     m_alpha.set("Alpha", 1.0, 0.0, 1.0);
     m_presets.add(m_alpha);
@@ -104,6 +110,8 @@ void GuiManager::setupPresetsGui()
     folder->addSlider(m_speed);
     folder->addSlider(m_size);
     folder->addSlider(m_hue);
+    folder->addSlider(m_saturation);
+    folder->addSlider(m_brightness);
     folder->addSlider(m_alpha);
     folder->expand();
     m_gui.addBreak();

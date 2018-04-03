@@ -86,6 +86,7 @@ void MeshScene::updateMesh()
             m_mesh.setVertex( i, p );
             float brightness = ofMap(noise, 0.3, 1.0, 0, 255,true);
             auto color = AppManager::getInstance().getSettingsManager().getColor("GOLD");
+            color.setHsb(26, 121, 100);
             color.setBrightness(brightness);
             m_mesh.setColor(i ,color);
             

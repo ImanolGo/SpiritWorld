@@ -93,6 +93,10 @@ public:
     
     float getAlpha(){return m_alpha;}
     
+    float getBrightness(){return m_brightness;}
+    
+    float getSaturation(){return m_saturation;}
+    
 private:
     
     void setupGuiParameters();
@@ -117,8 +121,11 @@ private:
     ofParameter<float>      m_sceneTransitionTime;
     ofParameter<float>      m_speed;
     ofParameter<float>      m_size;
+    ofParameter<float>      m_brightness;
+    ofParameter<float>      m_saturation;
     ofParameter<float>      m_hue;
     ofParameter<float>      m_alpha;
+    
     
    
     bool        m_showGui;  //It defines the whether the gui should be shown or not
