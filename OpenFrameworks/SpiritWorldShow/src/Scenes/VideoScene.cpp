@@ -82,6 +82,8 @@ void VideoScene::drawVideo()
 void VideoScene::willFadeIn() {
      ofLogNotice("VideoScene::willFadeIn");
     
+    AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
+    
     if(m_videoPlayer.isInitialized() && m_videoPlayer.isLoaded())
     {
         m_videoPlayer.play();
@@ -94,6 +96,7 @@ void VideoScene::willDraw() {
 
 void VideoScene::willFadeOut() {
     ofLogNotice("VideoScene::willFadeOut");
+     AppManager::getInstance().getGuiManager().savePresetsValues(getName());
 }
 
 void VideoScene::willExit() {

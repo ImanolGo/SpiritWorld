@@ -52,6 +52,7 @@ void GuiManager::setup()
 void GuiManager::setupGuiParameters()
 {
 
+    ofxDatGuiLog::quiet();
     m_gui.setPosition(ofxDatGuiAnchor::TOP_LEFT);
     m_gui.setAssetPath(ofToDataPath("fonts/"));
     //m_gui.setAssetPath("../Resources/data/fonts/");
@@ -86,20 +87,26 @@ void GuiManager::setupPresetsGui()
     m_sceneTransitionTime.addListener(sceneManager, &SceneManager::onTransitionTimeChange);
     m_parameters.add(m_sceneTransitionTime);
     
-    m_speed.set("Speed", 0.5, 0.0, 1.0);
+    m_speed.set("Speed", 0.5, 0.0, 4.0);
     m_presets.add(m_speed);
     
     m_size.set("Size", 0.5, 0.0, 1.0);
     m_presets.add(m_size);
-    
-    m_brightness.set("Brightness", 255.0, 0.0, 255.0);
-    m_presets.add(m_brightness);
     
     m_hue.set("Hue", 0.0, 0.0, 255.0);
     m_presets.add(m_hue);
     
     m_saturation.set("Saturation", 0.0, 0.0, 255.0);
     m_presets.add(m_saturation);
+    
+    m_value.set("Value", 255.0, 0.0, 255.0);
+    m_presets.add(m_value);
+    
+    m_brightness.set("Brightness", 1.0, 0.0, 1.0);
+    m_presets.add(m_brightness);
+    
+    m_contrast.set("Contrast", 1.0, 0.0, 2.0);
+    m_presets.add(m_contrast);
     
     m_alpha.set("Alpha", 1.0, 0.0, 1.0);
     m_presets.add(m_alpha);
@@ -111,8 +118,10 @@ void GuiManager::setupPresetsGui()
     folder->addSlider(m_size);
     folder->addSlider(m_hue);
     folder->addSlider(m_saturation);
+    folder->addSlider(m_value);
     folder->addSlider(m_brightness);
-    folder->addSlider(m_alpha);
+    folder->addSlider(m_contrast);
+    //folder->addSlider(m_alpha);
     folder->expand();
     m_gui.addBreak();
 }

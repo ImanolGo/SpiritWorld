@@ -73,6 +73,8 @@ private:
     //! Set-up the syphon server
     void setupSyphon();
     
+    void setupShader();
+    
     //! updates the syphon textture to be published
     void updateSyphon();
     
@@ -110,7 +112,9 @@ private:
     ofRectangle         m_windowRect;
     RectangleVisual     m_windowFrame;
     ofFbo               m_fbo;
+    ofFbo               m_fboColor;
     ofxSyphonServer     m_syphonServer;
+    ofShader            m_shader;
     
 };
 

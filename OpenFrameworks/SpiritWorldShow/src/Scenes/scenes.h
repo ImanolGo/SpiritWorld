@@ -14,3 +14,5 @@
 #include "MeshScene.h"
 #include "WireFrameScene.h"
 #include "DotsScene.h"
+#include "ColorScene.h"
+#include "SparkleScene.h"

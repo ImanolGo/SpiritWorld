@@ -28,6 +28,7 @@ void MeshScene::setup() {
 
 void MeshScene::setupMesh()
 {
+    //ofColor color = ofColor::white;
     auto color = AppManager::getInstance().getSettingsManager().getColor("GOLD");
     
     int meshSize = 100;
@@ -41,7 +42,7 @@ void MeshScene::setupMesh()
         for (int x=0; x<W; x++) {
             m_mesh.addVertex(ofPoint((x - W/2) * meshSize, (y - H/2) * meshSize, 0 )); // adding texure coordinates allows us to bind textures to it later // --> this could be made into a function so that textures can be swapped / updated
             m_mesh.addTexCoord(ofPoint(x * (width / W), y * (height / H)));
-            m_mesh.addColor(color);
+            m_mesh.addColor(ofColor::white);
         }
     }
     
@@ -85,10 +86,12 @@ void MeshScene::updateMesh()
             p.z = ofMap(noise, 0.0, 1.0, 0.0, size);
             m_mesh.setVertex( i, p );
             float brightness = ofMap(noise, 0.3, 1.0, 0, 255,true);
-            auto color = AppManager::getInstance().getSettingsManager().getColor("GOLD");
-            color.setHsb(26, 121, 100);
-            color.setBrightness(brightness);
-            m_mesh.setColor(i ,color);
+            //auto color = AppManager::getInstance().getSettingsManager().getColor("GOLD");
+            //color.setHsb(26, 121, 100);
+            ofColor c = ofColor::white;
+           // auto color = m_mesh.getColor(i);
+            c.setBrightness(brightness);
+            m_mesh.setColor(i ,c);
             
 //            float brighntness = p.z;
 //            //Change color of vertex

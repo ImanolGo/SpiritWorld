@@ -1,8 +1,10 @@
 <group>
-	<Speed>0.28</Speed>
+	<Speed>0.2</Speed>
 	<Size>0.33</Size>
-	<Brightness>255</Brightness>
-	<Hue>0</Hue>
+	<Hue>199.13</Hue>
 	<Saturation>0</Saturation>
+	<Value>184.8</Value>
+	<Brightness>1</Brightness>
+	<Contrast>1.31</Contrast>
 	<Alpha>1</Alpha>
 </group>

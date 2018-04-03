@@ -95,7 +95,11 @@ public:
     
     float getBrightness(){return m_brightness;}
     
+    float getValue(){return m_value;}
+    
     float getSaturation(){return m_saturation;}
+    
+    float getContrast(){return m_contrast;}
     
 private:
     
@@ -121,9 +125,11 @@ private:
     ofParameter<float>      m_sceneTransitionTime;
     ofParameter<float>      m_speed;
     ofParameter<float>      m_size;
+    ofParameter<float>      m_value;
     ofParameter<float>      m_brightness;
     ofParameter<float>      m_saturation;
     ofParameter<float>      m_hue;
+    ofParameter<float>      m_contrast;
     ofParameter<float>      m_alpha;
     
     

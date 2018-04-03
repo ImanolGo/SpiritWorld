@@ -54,6 +54,7 @@ void LayoutManager::setup()
     this->setupFbo();
     this->setupWindowFrame();
     this->setupSyphon();
+    this->setupShader();
     
     this->createTextVisuals();
     this->createSvgVisuals();
@@ -76,6 +77,9 @@ void LayoutManager::setupFbo()
     m_fbo.allocate(width, height, GL_RGBA);
     m_fbo.begin(); ofClear(0); m_fbo.end();
     
+    m_fboColor.allocate(width, height, GL_RGBA);
+    m_fboColor.begin(); ofClear(0); m_fboColor.end();
+    
 }
 
 void LayoutManager::setupSyphon()
@@ -84,6 +88,16 @@ void LayoutManager::setupSyphon()
     m_syphonServer.setName(name);
     
     ofLogNotice() <<"VideoOutputManager::setupSyphon << Setting up Syphon server: " << name;
+}
+
+void LayoutManager::setupShader()
+{
+    if(ofIsGLProgrammableRenderer()){
+        m_shader.load("shaders/shadersGL3/BrightnessContrast");
+    }
+    else{
+        m_shader.load("shaders/shadersGL2/BrightnessContrast");
+    }
 }
 
 
@@ -232,20 +246,36 @@ void LayoutManager::drawText()
 void LayoutManager::drawFbo()
 {
     auto hue = AppManager::getInstance().getGuiManager().getHue();
-    auto brightness = AppManager::getInstance().getGuiManager().getBrightness();
     auto saturation = AppManager::getInstance().getGuiManager().getSaturation();
-    ofColor color; color.setHsb(hue, saturation, brightness);
-    
-    brightness = ofMap(brightness, 0.0, 1.0, 0, 255);
+    auto value = AppManager::getInstance().getGuiManager().getValue();
+    ofColor color; color.setHsb(hue, saturation, value);
+
+    auto brightness = AppManager::getInstance().getGuiManager().getBrightness();
+    auto contrast = AppManager::getInstance().getGuiManager().getContrast();
     
     
     
     ofEnableAlphaBlending();
-    m_fbo.begin();
-    ofClear(0, 0, 0);
+    
+    m_fboColor.begin();
+    ofClear(0);
     ofSetColor(color);
     AppManager::getInstance().getSceneManager().draw();
+    m_fboColor.end();
     
+    m_fbo.begin();
+    ofClear(0, 0, 0);
+    
+    
+    
+    m_shader.begin();
+    m_shader.setUniform1f("brightness", brightness);
+    m_shader.setUniform1f("contrast", contrast);
+    
+    //ofSetColor(color);
+    m_fboColor.draw(0,0);
+    
+    m_shader.end();
     m_fbo.end();
     ofDisableAlphaBlending();
     

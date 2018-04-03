@@ -12,6 +12,8 @@
 		0466B9E6A55078A9F39B1B4B /* svgtiny_gradient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD4F639B12AA5C1013177E49 /* svgtiny_gradient.cpp */; };
 		0490421322E35728363ECB8D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1CF5CB791D00F2A2D10BC4FF /* README.md */; };
 		059F15A57C00F89CF43FDDD6 /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE9EA26E2A646CE843DEEB1E /* ofxSmartFont.cpp */; };
+		08D7C5FE2073973A00AEF4DA /* ColorScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C5FD2073973A00AEF4DA /* ColorScene.cpp */; };
+		08D7C601207397CB00AEF4DA /* SparkleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C600207397CB00AEF4DA /* SparkleScene.cpp */; };
 		08E4B10720716E09008F5379 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E4B10620716E09008F5379 /* Syphon.framework */; };
 		08E4B10920716E6B008F5379 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08E4B10820716E6B008F5379 /* Syphon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		08E4B110207177FA008F5379 /* MeshScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08E4B10E207177FA008F5379 /* MeshScene.cpp */; };
@@ -156,6 +158,10 @@
 		074978820820325AB8737225 /* README.md */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = README.md; path = src/Addons/ofxUnicode/README.md; sourceTree = SOURCE_ROOT; };
 		0758DB960B9BE6F86F84AC84 /* ofxChromaGlitch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxChromaGlitch.h; path = src/Addons/ofxFX/src/filters/ofxChromaGlitch.h; sourceTree = SOURCE_ROOT; };
 		08C5194B0C92DDA2A7539395 /* core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = core.h; path = src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8/core.h; sourceTree = SOURCE_ROOT; };
+		08D7C5FC2073973A00AEF4DA /* ColorScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorScene.h; path = Scenes/ColorScene.h; sourceTree = "<group>"; };
+		08D7C5FD2073973A00AEF4DA /* ColorScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ColorScene.cpp; path = Scenes/ColorScene.cpp; sourceTree = "<group>"; };
+		08D7C5FF207397CB00AEF4DA /* SparkleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SparkleScene.h; path = Scenes/SparkleScene.h; sourceTree = "<group>"; };
+		08D7C600207397CB00AEF4DA /* SparkleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SparkleScene.cpp; path = Scenes/SparkleScene.cpp; sourceTree = "<group>"; };
 		08E4B10620716E09008F5379 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = src/Addons/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = "<group>"; };
 		08E4B10820716E6B008F5379 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = src/Addons/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = "<group>"; };
 		08E4B10E207177FA008F5379 /* MeshScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MeshScene.cpp; path = Scenes/MeshScene.cpp; sourceTree = "<group>"; };
@@ -1002,6 +1008,10 @@
 				08E4B11220718163008F5379 /* WireFrameScene.h */,
 				08E4B11620724321008F5379 /* DotsScene.cpp */,
 				08E4B11520724321008F5379 /* DotsScene.h */,
+				08D7C5FD2073973A00AEF4DA /* ColorScene.cpp */,
+				08D7C5FC2073973A00AEF4DA /* ColorScene.h */,
+				08D7C600207397CB00AEF4DA /* SparkleScene.cpp */,
+				08D7C5FF207397CB00AEF4DA /* SparkleScene.h */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1330,6 +1340,7 @@
 			files = (
 				00E7693985C6746E94870C0C /* history.md in Sources */,
 				E49699C1F3B736D5847985D8 /* license.txt in Sources */,
+				08D7C5FE2073973A00AEF4DA /* ColorScene.cpp in Sources */,
 				6BE84BED9B493CA514480EF3 /* ofxaddons_thumbnail.png in Sources */,
 				040259BAD9E7E5CDA062C1FF /* Verdana.ttf in Sources */,
 				E23B9A2CD222C1969CC8B2BA /* icon-group-closed.png in Sources */,
@@ -1398,6 +1409,7 @@
 				DEBDF1F781CA34214BEBD185 /* RectangleVisual.cpp in Sources */,
 				8BC3D4AABDF5E655706BA3B8 /* SvgVisual.cpp in Sources */,
 				DB05E98D002D6650AA23E87B /* TextVisual.cpp in Sources */,
+				08D7C601207397CB00AEF4DA /* SparkleScene.cpp in Sources */,
 				E66F471FC218F559192473CB /* VideoVisual.cpp in Sources */,
 				9D9E0E996DA1B9AC9952C889 /* ViewManager.cpp in Sources */,
 				875651AF8693D3DE4CC23485 /* VisualEffects.cpp in Sources */,

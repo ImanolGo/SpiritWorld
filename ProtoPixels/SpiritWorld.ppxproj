@@ -45,8 +45,8 @@
             <num_lights>1</num_lights>
             <positions>-0.353212 0.892068 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -62,8 +62,8 @@
             <num_lights>51</num_lights>
             <positions>-0.347879 0.905979 0,-0.345752 0.896208 0,-0.343624 0.886437 0,-0.341497 0.876666 0,-0.339369 0.866895 0,-0.337242 0.857124 0,-0.335114 0.847353 0,-0.332987 0.837581 0,-0.330859 0.82781 0,-0.328732 0.818039 0,-0.326605 0.808268 0,-0.324477 0.798497 0,-0.32235 0.788726 0,-0.320222 0.778955 0,-0.318095 0.769184 0,-0.315967 0.759413 0,-0.31384 0.749642 0,-0.311713 0.739871 0,-0.309585 0.7301 0,-0.307458 0.720328 0,-0.30533 0.710557 0,-0.303203 0.700786 0,-0.301075 0.691015 0,-0.298948 0.681244 0,-0.29682 0.671473 0,-0.294693 0.661702 0,-0.292566 0.651931 0,-0.290438 0.64216 0,-0.288311 0.632389 0,-0.286183 0.622618 0,-0.284056 0.612847 0,-0.281928 0.603076 0,-0.279801 0.593304 0,-0.277673 0.583533 0,-0.275546 0.573762 0,-0.273419 0.563991 0,-0.271291 0.55422 0,-0.269164 0.544449 0,-0.267036 0.534678 0,-0.264909 0.524907 0,-0.262781 0.515136 0,-0.260654 0.505365 0,-0.258527 0.495594 0,-0.256399 0.485823 0,-0.254272 0.476051 0,-0.252144 0.46628 0,-0.250017 0.456509 0,-0.247889 0.446738 0,-0.245762 0.436967 0,-0.243634 0.427196 0,-0.241507 0.417425 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -79,8 +79,8 @@
             <num_lights>4</num_lights>
             <positions>-0.23268 0.410999 0,-0.222682 0.411189 0,-0.212684 0.411379 0,-0.202686 0.411569 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -96,8 +96,8 @@
             <num_lights>51</num_lights>
             <positions>-0.191987 0.415976 0,-0.191711 0.425972 0,-0.191436 0.435968 0,-0.19116 0.445965 0,-0.190884 0.455961 0,-0.190609 0.465957 0,-0.190333 0.475953 0,-0.190058 0.485949 0,-0.189782 0.495946 0,-0.189506 0.505942 0,-0.189231 0.515938 0,-0.188955 0.525934 0,-0.188679 0.53593 0,-0.188404 0.545927 0,-0.188128 0.555923 0,-0.187852 0.565919 0,-0.187577 0.575915 0,-0.187301 0.585911 0,-0.187025 0.595908 0,-0.18675 0.605904 0,-0.186474 0.6159 0,-0.186199 0.625896 0,-0.185923 0.635892 0,-0.185647 0.645889 0,-0.185372 0.655885 0,-0.185096 0.665881 0,-0.18482 0.675877 0,-0.184545 0.685873 0,-0.184269 0.69587 0,-0.183993 0.705866 0,-0.183718 0.715862 0,-0.183442 0.725858 0,-0.183167 0.735854 0,-0.182891 0.745851 0,-0.182615 0.755847 0,-0.18234 0.765843 0,-0.182064 0.775839 0,-0.181788 0.785835 0,-0.181513 0.795832 0,-0.181237 0.805828 0,-0.180961 0.815824 0,-0.180686 0.82582 0,-0.18041 0.835816 0,-0.180134 0.845813 0,-0.179859 0.855809 0,-0.179583 0.865805 0,-0.179308 0.875801 0,-0.179032 0.885797 0,-0.178756 0.895794 0,-0.178481 0.90579 0,-0.178205 0.915786 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -113,8 +113,8 @@
             <num_lights>9</num_lights>
             <positions>-0.168929 0.919271 0,-0.163349 0.921477 0,-0.157769 0.923682 0,-0.152189 0.925888 0,-0.146609 0.928093 0,-0.141029 0.930298 0,-0.135449 0.932504 0,-0.129869 0.934709 0,-0.124289 0.936915 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -130,8 +130,8 @@
             <num_lights>9</num_lights>
             <positions>-0.11271 0.936661 0,-0.107161 0.934379 0,-0.101612 0.932097 0,-0.0960626 0.929814 0,-0.0905136 0.927532 0,-0.0849646 0.92525 0,-0.0794156 0.922967 0,-0.0738667 0.920685 0,-0.0683177 0.918403 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -147,8 +147,8 @@
             <num_lights>51</num_lights>
             <positions>-0.0593791 0.913856 0,-0.0590933 0.90386 0,-0.0588076 0.893864 0,-0.0585218 0.883868 0,-0.0582361 0.873872 0,-0.0579503 0.863876 0,-0.0576646 0.853881 0,-0.0573788 0.843885 0,-0.0570931 0.833889 0,-0.0568073 0.823893 0,-0.0565216 0.813897 0,-0.0562358 0.803901 0,-0.0559501 0.793905 0,-0.0556643 0.783909 0,-0.0553786 0.773913 0,-0.0550928 0.763917 0,-0.0548071 0.753921 0,-0.0545213 0.743925 0,-0.0542356 0.733929 0,-0.0539498 0.723934 0,-0.0536641 0.713938 0,-0.0533783 0.703942 0,-0.0530926 0.693946 0,-0.0528068 0.68395 0,-0.0525211 0.673954 0,-0.0522353 0.663958 0,-0.0519495 0.653962 0,-0.0516638 0.643966 0,-0.051378 0.63397 0,-0.0510923 0.623974 0,-0.0508065 0.613978 0,-0.0505208 0.603983 0,-0.050235 0.593987 0,-0.0499493 0.583991 0,-0.0496635 0.573995 0,-0.0493778 0.563999 0,-0.049092 0.554003 0,-0.0488063 0.544007 0,-0.0485205 0.534011 0,-0.0482348 0.524015 0,-0.047949 0.514019 0,-0.0476633 0.504023 0,-0.0473775 0.494027 0,-0.0470918 0.484031 0,-0.046806 0.474036 0,-0.0465203 0.46404 0,-0.0462345 0.454044 0,-0.0459488 0.444048 0,-0.045663 0.434052 0,-0.0453773 0.424056 0,-0.0450915 0.41406 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -164,8 +164,8 @@
             <num_lights>4</num_lights>
             <positions>-0.036073 0.410399 0,-0.0260748 0.410589 0,-0.0160766 0.410779 0,-0.00607841 0.410969 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -181,8 +181,8 @@
             <num_lights>51</num_lights>
             <positions>0.0023874 0.413988 0,0.00451946 0.423758 0,0.00665152 0.433528 0,0.00878358 0.443298 0,0.0109156 0.453069 0,0.0130477 0.462839 0,0.0151798 0.472609 0,0.0173118 0.482379 0,0.0194439 0.492149 0,0.0215759 0.501919 0,0.023708 0.511689 0,0.0258401 0.521459 0,0.0279721 0.531229 0,0.0301042 0.540999 0,0.0322362 0.550769 0,0.0343683 0.560539 0,0.0365004 0.570309 0,0.0386324 0.580079 0,0.0407645 0.58985 0,0.0428965 0.59962 0,0.0450286 0.60939 0,0.0471607 0.61916 0,0.0492927 0.62893 0,0.0514248 0.6387 0,0.0535568 0.64847 0,0.0556889 0.65824 0,0.057821 0.66801 0,0.059953 0.67778 0,0.0620851 0.68755 0,0.0642171 0.69732 0,0.0663492 0.70709 0,0.0684813 0.71686 0,0.0706133 0.726631 0,0.0727454 0.736401 0,0.0748774 0.746171 0,0.0770095 0.755941 0,0.0791416 0.765711 0,0.0812736 0.775481 0,0.0834057 0.785251 0,0.0855377 0.795021 0,0.0876698 0.804791 0,0.0898019 0.814561 0,0.0919339 0.824331 0,0.094066 0.834101 0,0.096198 0.843871 0,0.0983301 0.853641 0,0.100462 0.863411 0,0.102594 0.873182 0,0.104726 0.882952 0,0.106858 0.892722 0,0.10899 0.902492 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -198,8 +198,8 @@
             <num_lights>3</num_lights>
             <positions>-0.326572 0.887932 0,-0.331695 0.89652 0,-0.336818 0.905108 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -215,8 +215,8 @@
             <num_lights>24</num_lights>
             <positions>-0.34428 0.915249 0,-0.343297 0.924195 0,-0.342314 0.933141 0,-0.341331 0.942088 0,-0.340348 0.951034 0,-0.339365 0.95998 0,-0.338382 0.968926 0,-0.337399 0.977872 0,-0.336416 0.986818 0,-0.335433 0.995765 0,-0.33445 1.00471 0,-0.333467 1.01366 0,-0.332484 1.0226 0,-0.3315 1.03155 0,-0.330517 1.0405 0,-0.329534 1.04944 0,-0.328551 1.05839 0,-0.327568 1.06733 0,-0.326585 1.07628 0,-0.325602 1.08523 0,-0.324619 1.09417 0,-0.323636 1.10312 0,-0.322653 1.11206 0,-0.32167 1.12101 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -232,8 +232,8 @@
             <num_lights>20</num_lights>
             <positions>-0.119849 1.0948 0,-0.120649 1.08584 0,-0.121449 1.07687 0,-0.12225 1.06791 0,-0.12305 1.05894 0,-0.12385 1.04998 0,-0.12465 1.04102 0,-0.12545 1.03205 0,-0.126251 1.02309 0,-0.127051 1.01412 0,-0.127851 1.00516 0,-0.128651 0.996193 0,-0.129452 0.987229 0,-0.130252 0.978265 0,-0.131052 0.9693 0,-0.131852 0.960336 0,-0.132652 0.951372 0,-0.133453 0.942407 0,-0.134253 0.933443 0,-0.135053 0.924479 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -249,8 +249,8 @@
             <num_lights>3</num_lights>
             <positions>-0.136077 0.914694 0,-0.145072 0.914397 0,-0.154067 0.9141 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -266,8 +266,8 @@
             <num_lights>59</num_lights>
             <positions>-0.163588 0.89994 0,-0.163259 0.889946 0,-0.162929 0.879951 0,-0.1626 0.869957 0,-0.16227 0.859962 0,-0.16194 0.849968 0,-0.161611 0.839973 0,-0.161281 0.829979 0,-0.160952 0.819984 0,-0.160622 0.809989 0,-0.160292 0.799995 0,-0.159963 0.79 0,-0.159633 0.780006 0,-0.159304 0.770011 0,-0.158974 0.760017 0,-0.158644 0.750022 0,-0.158315 0.740027 0,-0.157985 0.730033 0,-0.157656 0.720038 0,-0.157326 0.710044 0,-0.156996 0.700049 0,-0.156667 0.690055 0,-0.156337 0.68006 0,-0.156008 0.670065 0,-0.155678 0.660071 0,-0.155348 0.650076 0,-0.155019 0.640082 0,-0.154689 0.630087 0,-0.15436 0.620093 0,-0.15403 0.610098 0,-0.1537 0.600103 0,-0.153371 0.590109 0,-0.153041 0.580114 0,-0.152712 0.57012 0,-0.152382 0.560125 0,-0.152052 0.550131 0,-0.151723 0.540136 0,-0.151393 0.530141 0,-0.151064 0.520147 0,-0.150734 0.510152 0,-0.150404 0.500158 0,-0.150075 0.490163 0,-0.149745 0.480169 0,-0.149416 0.470174 0,-0.149086 0.460179 0,-0.148756 0.450185 0,-0.148427 0.44019 0,-0.148097 0.430196 0,-0.147768 0.420201 0,-0.147438 0.410207 0,-0.147108 0.400212 0,-0.146779 0.390217 0,-0.146449 0.380223 0,-0.14612 0.370228 0,-0.14579 0.360234 0,-0.14546 0.350239 0,-0.145131 0.340245 0,-0.144801 0.33025 0,-0.144472 0.320255 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -283,8 +283,8 @@
             <num_lights>5</num_lights>
             <positions>-0.139785 0.30763 0,-0.129786 0.307803 0,-0.119788 0.307977 0,-0.10979 0.308151 0,-0.099791 0.308324 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -300,8 +300,8 @@
             <num_lights>59</num_lights>
             <positions>-0.0919637 0.321387 0,-0.0917345 0.331385 0,-0.0915054 0.341382 0,-0.0912762 0.351379 0,-0.091047 0.361377 0,-0.0908179 0.371374 0,-0.0905887 0.381371 0,-0.0903595 0.391369 0,-0.0901304 0.401366 0,-0.0899012 0.411364 0,-0.089672 0.421361 0,-0.0894429 0.431358 0,-0.0892137 0.441356 0,-0.0889845 0.451353 0,-0.0887554 0.46135 0,-0.0885262 0.471348 0,-0.088297 0.481345 0,-0.0880679 0.491343 0,-0.0878387 0.50134 0,-0.0876096 0.511337 0,-0.0873804 0.521335 0,-0.0871512 0.531332 0,-0.0869221 0.541329 0,-0.0866929 0.551327 0,-0.0864637 0.561324 0,-0.0862346 0.571322 0,-0.0860054 0.581319 0,-0.0857762 0.591316 0,-0.0855471 0.601314 0,-0.0853179 0.611311 0,-0.0850887 0.621308 0,-0.0848596 0.631306 0,-0.0846304 0.641303 0,-0.0844012 0.6513 0,-0.0841721 0.661298 0,-0.0839429 0.671295 0,-0.0837137 0.681293 0,-0.0834846 0.69129 0,-0.0832554 0.701287 0,-0.0830263 0.711285 0,-0.0827971 0.721282 0,-0.0825679 0.731279 0,-0.0823388 0.741277 0,-0.0821096 0.751274 0,-0.0818804 0.761272 0,-0.0816513 0.771269 0,-0.0814221 0.781266 0,-0.0811929 0.791264 0,-0.0809638 0.801261 0,-0.0807346 0.811258 0,-0.0805054 0.821256 0,-0.0802763 0.831253 0,-0.0800471 0.841251 0,-0.0798179 0.851248 0,-0.0795888 0.861245 0,-0.0793596 0.871243 0,-0.0791304 0.88124 0,-0.0789013 0.891237 0,-0.0786721 0.901235 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -317,8 +317,8 @@
             <num_lights>3</num_lights>
             <positions>-0.079314 0.914922 0,-0.0883091 0.914625 0,-0.0973042 0.914328 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -334,8 +334,8 @@
             <num_lights>20</num_lights>
             <positions>-0.104314 0.924717 0,-0.104954 0.933694 0,-0.105594 0.942671 0,-0.106234 0.951648 0,-0.106875 0.960625 0,-0.107515 0.969603 0,-0.108155 0.97858 0,-0.108795 0.987557 0,-0.109436 0.996534 0,-0.110076 1.00551 0,-0.110716 1.01449 0,-0.111356 1.02347 0,-0.111997 1.03244 0,-0.112637 1.04142 0,-0.113277 1.0504 0,-0.113917 1.05937 0,-0.114558 1.06835 0,-0.115198 1.07733 0,-0.115838 1.08631 0,-0.116478 1.09528 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -351,8 +351,8 @@
             <num_lights>24</num_lights>
             <positions>0.0869464 1.12304 0,0.0877035 1.11408 0,0.0884605 1.10511 0,0.0892175 1.09614 0,0.0899746 1.08717 0,0.0907316 1.0782 0,0.0914886 1.06923 0,0.0922457 1.06027 0,0.0930027 1.0513 0,0.0937597 1.04233 0,0.0945168 1.03336 0,0.0952738 1.02439 0,0.0960308 1.01543 0,0.0967878 1.00646 0,0.0975449 0.99749 0,0.0983019 0.988522 0,0.0990589 0.979554 0,0.099816 0.970585 0,0.100573 0.961617 0,0.10133 0.952649 0,0.102087 0.943681 0,0.102844 0.934713 0,0.103601 0.925745 0,0.104358 0.916777 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -368,8 +368,8 @@
             <num_lights>10</num_lights>
             <positions>0.0913709 0.911008 0,0.0773746 0.911333 0,0.0633784 0.911658 0,0.0493822 0.911983 0,0.0353859 0.912308 0,0.0213897 0.912632 0,0.00739345 0.912957 0,-0.00660279 0.913282 0,-0.020599 0.913607 0,-0.0345953 0.913932 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -385,8 +385,8 @@
             <num_lights>12</num_lights>
             <positions>-0.0417971 0.915772 0,-0.0483396 0.918261 0,-0.0548821 0.92075 0,-0.0614246 0.923239 0,-0.0679671 0.925728 0,-0.0745096 0.928217 0,-0.0810522 0.930707 0,-0.0875947 0.933196 0,-0.0941372 0.935685 0,-0.10068 0.938174 0,-0.107222 0.940663 0,-0.113765 0.943152 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -402,8 +402,8 @@
             <num_lights>12</num_lights>
             <positions>-0.12087 0.942704 0,-0.127357 0.940073 0,-0.133844 0.937442 0,-0.14033 0.934811 0,-0.146817 0.93218 0,-0.153304 0.929549 0,-0.15979 0.926917 0,-0.166277 0.924286 0,-0.172764 0.921655 0,-0.17925 0.919024 0,-0.185737 0.916393 0,-0.192224 0.913762 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -419,8 +419,8 @@
             <num_lights>10</num_lights>
             <positions>-0.206036 0.913007 0,-0.220032 0.912705 0,-0.234029 0.912403 0,-0.248026 0.912101 0,-0.262023 0.911799 0,-0.276019 0.911497 0,-0.290016 0.911195 0,-0.304013 0.910893 0,-0.31801 0.910591 0,-0.332006 0.910289 0,</positions>
             <parameters>
-                <PPx_gamma_correction type="bool">1</PPx_gamma_correction>
-                <PPx_temporal_dithering type="bool">0</PPx_temporal_dithering>
+                <PPx_gamma_correction type="bool">0</PPx_gamma_correction>
+                <PPx_temporal_dithering type="bool">1</PPx_temporal_dithering>
                 <PPx_double_points type="bool">0</PPx_double_points>
                 <PPx_RGB_ordering type="stringoption">GRB</PPx_RGB_ordering>
                 <custom_ordering type="string">R,G,B</custom_ordering>
@@ -488,7 +488,7 @@
             <name>color</name>
             <type>py:color</type>
             <parameters>
-                <enabled type="bool">1</enabled>
+                <enabled type="bool">0</enabled>
                 <blend_mode type="stringoption">alpha</blend_mode>
                 <color_levels type="color">255, 255, 255, 255</color_levels>
                 <projection_type type="stringoption">flatsimple</projection_type>
@@ -497,7 +497,7 @@
                     <height type="float">1</height>
                 </projection_parameters>
                 <params>
-                    <color type="color">31, 27, 116, 255</color>
+                    <color type="color">56, 8, 8, 255</color>
                 </params>
             </parameters>
             <transformation type="matrix4x4">0.583166,        0,        0,        0&#x0A;       0, 0.961769,        0,        0&#x0A;       0,        0,        1,        0&#x0A;-0.119682, 0.708101,        0,        1</transformation>
@@ -514,10 +514,10 @@
                     <width type="float">1</width>
                     <height type="float">1</height>
                 </projection_parameters>
-                <syphonservername type="string"></syphonservername>
-                <syphonappname type="string"></syphonappname>
+                <syphonservername type="string">SpiritWorld</syphonservername>
+                <syphonappname type="string">SpiritWorldShow</syphonappname>
                 <reverse_ratio type="bool">0</reverse_ratio>
-                <Syphon_Pipe type="stringoption">ProtoPixelSyphon-&gt;WindDressSyphon</Syphon_Pipe>
+                <Syphon_Pipe type="stringoption">SpiritWorldShow-&gt;SpiritWorld</Syphon_Pipe>
             </parameters>
             <transformation type="matrix4x4">0.478297,        0,        0,        0&#x0A;       0, 0.837424,        0,        0&#x0A;       0,        0,        1,        0&#x0A;-0.12302, 0.717289,        0,        1</transformation>
         </content>
@@ -531,7 +531,7 @@
                 <connected type="bool">1</connected>
                 <outlets type="customint">4</outlets>
                 <Device type="string">33:30:3a:41:45:3a</Device>
-                <device_data type="string">{ &quot;mac_addr&quot; : &quot;33:30:3a:41:45:3a&quot; }</device_data>
+                <device_data type="string">{&#x0A;   &quot;mac_addr&quot; : &quot;33:30:3a:41:45:3a&quot;&#x0A;}&#x0A;</device_data>
             </parameters>
             <outlets>
                 <outlet>

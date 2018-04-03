@@ -53,9 +53,13 @@ void SceneManager::createScenes()
     scene = ofPtr<ofxScene> (new BlankScene());
     m_mySceneManager.addScene(scene);
     
-    //Create Video Scene
-    scene = ofPtr<ofxScene> (new VideoScene("TEST_VIDEO"));
+    //Create Color Scene
+    scene = ofPtr<ofxScene> (new ColorScene());
     m_mySceneManager.addScene(scene);
+    
+//    //Create Video Scene
+//    scene = ofPtr<ofxScene> (new VideoScene("TEST_VIDEO"));
+//    m_mySceneManager.addScene(scene);
     
     //Create Video Scene
     scene = ofPtr<ofxScene> (new VideoScene("EXPLOSION"));
@@ -79,6 +83,10 @@ void SceneManager::createScenes()
     
     //Create Dots Scene
     scene = ofPtr<ofxScene> (new DotsScene());
+    m_mySceneManager.addScene(scene);
+    
+    //Create Dots Scene
+    scene = ofPtr<ofxScene> (new SparkleScene());
     m_mySceneManager.addScene(scene);
     
     

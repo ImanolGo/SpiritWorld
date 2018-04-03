@@ -144,7 +144,7 @@ void WireFrameScene::updateFbo()
     
     ofEnableAlphaBlending();
     m_fbo.begin();
-        ofSetColor(0, 0, 0, 2);
+        ofSetColor(0, 0, 0, 5);
         ofDrawRectangle(0, 0, width, height);
         ofSetColor(255);
          this->drawParticles();

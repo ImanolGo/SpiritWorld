@@ -1,5 +1,5 @@
 /*
- *  DotsScene.cpp
+ *  SparkleScene.cpp
  *  Spirit World Show
  *
  *  Created by Imanol Gomez on 02/04/18.
@@ -7,15 +7,15 @@
  */
 
 
-#include "DotsScene.h"
+#include "SparkleScene.h"
 #include "AppManager.h"
 
-Dot::Dot()
+Sparkle::Sparkle()
 {
     this->setup();
 }
 
-void Dot::setup()
+void Sparkle::setup()
 {
     float width = AppManager::getInstance().getSettingsManager().getAppWidth();
     float height = AppManager::getInstance().getSettingsManager().getAppHeight();
@@ -29,22 +29,22 @@ void Dot::setup()
     this->setupImage();
 }
 
-void Dot::setupImage()
+void Sparkle::setupImage()
 {
-    m_dotVisual.setResource("Brush");
-    m_dotVisual.setCentred(true);
+    m_sparkleVisual.setResource("Brush");
+    m_sparkleVisual.setCentred(true);
     int size = 500;
-    m_dotVisual.setWidth(size, true);
+    m_sparkleVisual.setWidth(size, true);
     
-    m_dotVisual.setPosition(m_position);
-    m_dotVisual.setColor(ofColor::white);
+    m_sparkleVisual.setPosition(m_position);
+    m_sparkleVisual.setColor(ofColor::white);
 //    m_dotVisual.setColor(ofColor(5, 5,255));
 //    if(ofRandom(1.0) < 0.2){
 //        m_dotVisual.setColor(ofColor::white);
 //    }
 }
 
-void Dot::update()
+void Sparkle::update()
 {
     float timeScale = AppManager::getInstance().getGuiManager().getSpeed();
     timeScale = ofMap(timeScale, 0.0, 1.0, 0.0, 5.0);
@@ -53,14 +53,14 @@ void Dot::update()
     m_position.y += m_speed.y*timeScale;
 
     this->stayOnScreen();
-    m_dotVisual.setPosition(m_position);
+    m_sparkleVisual.setPosition(m_position);
     
     
     float scale = AppManager::getInstance().getGuiManager().getSize();
-     m_dotVisual.setScale(ofVec3f(scale));
+     m_sparkleVisual.setScale(ofVec3f(scale));
 }
 
-void Dot::stayOnScreen()
+void Sparkle::stayOnScreen()
 {
     float width = AppManager::getInstance().getSettingsManager().getAppWidth();
     float height = AppManager::getInstance().getSettingsManager().getAppHeight();
@@ -75,31 +75,31 @@ void Dot::stayOnScreen()
 }
 
 
-void Dot::draw()
+void Sparkle::draw()
 {
-    m_dotVisual.draw();
+    m_sparkleVisual.draw();
 }
 
 
 
-DotsScene::DotsScene(): ofxScene("DOTS")
+SparkleScene::SparkleScene(): ofxScene("SPARKLES")
 {
     this->setupFbo();
     this->setupParticles();
 }
 
-DotsScene::~DotsScene()
+SparkleScene::~SparkleScene()
 {
     //Intentionally left empty
 }
 
 
-void DotsScene::setup() {
+void SparkleScene::setup() {
     ofLogNotice(getName() + "::setup");
    
 }
 
-void DotsScene::setupFbo()
+void SparkleScene::setupFbo()
 {
     float width = AppManager::getInstance().getSettingsManager().getAppWidth();
     float height = AppManager::getInstance().getSettingsManager().getAppHeight();
@@ -109,7 +109,7 @@ void DotsScene::setupFbo()
     
 }
 
-void DotsScene::setupParticles()
+void SparkleScene::setupParticles()
 {
     int numParticles = 200;
     
@@ -118,19 +118,19 @@ void DotsScene::setupParticles()
     
     for (int i = 0; i < numParticles; i++)
     {
-        Dot particle;
+        Sparkle particle;
         m_particles.push_back(particle);
     }
 }
 
 
-void DotsScene::update()
+void SparkleScene::update()
 {
     this->updateParticles();
     this->updateFbo();
 }
 
-void DotsScene::updateParticles()
+void SparkleScene::updateParticles()
 {
     double dt = ofGetLastFrameTime();
     float width = AppManager::getInstance().getSettingsManager().getAppWidth();
@@ -144,7 +144,7 @@ void DotsScene::updateParticles()
     
 }
 
-void DotsScene::updateFbo()
+void SparkleScene::updateFbo()
 {
     float width = AppManager::getInstance().getSettingsManager().getAppWidth();
     float height = AppManager::getInstance().getSettingsManager().getAppHeight();
@@ -160,7 +160,7 @@ void DotsScene::updateFbo()
 }
 
 
-void DotsScene::draw()
+void SparkleScene::draw()
 {
     ofEnableAlphaBlending();
     ofBackground(0,0,0);
@@ -168,7 +168,7 @@ void DotsScene::draw()
      //this->drawParticles();
 }
 
-void DotsScene::drawParticles()
+void SparkleScene::drawParticles()
 {
     ofEnableBlendMode(OF_BLENDMODE_ADD);
     for (int i=0; i < m_particles.size(); i++)
@@ -179,20 +179,20 @@ void DotsScene::drawParticles()
     
 }
 
-void DotsScene::willFadeIn() {
-    ofLogNotice("DotsScene::willFadeIn");
+void SparkleScene::willFadeIn() {
+    ofLogNotice("SparkleScene::willFadeIn");
     AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
 }
 
-void DotsScene::willDraw() {
-    ofLogNotice("DotsScene::willDraw");
+void SparkleScene::willDraw() {
+    ofLogNotice("SparkleScene::willDraw");
 }
 
-void DotsScene::willFadeOut() {
-    ofLogNotice("DotsScene::willFadeOut");
+void SparkleScene::willFadeOut() {
+    ofLogNotice("SparkleScene::willFadeOut");
     AppManager::getInstance().getGuiManager().savePresetsValues(getName());
 }
 
-void DotsScene::willExit() {
-     ofLogNotice("DotsScene::willExit");
+void SparkleScene::willExit() {
+     ofLogNotice("SparkleScene::willExit");
 }

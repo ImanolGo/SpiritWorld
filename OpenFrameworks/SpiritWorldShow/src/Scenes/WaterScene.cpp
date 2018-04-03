@@ -28,7 +28,6 @@ void WaterScene::setup() {
 
 void WaterScene::setupShader()
 {
-   m_shader.load("shader/shadertoy");
 
    if(ofIsGLProgrammableRenderer()){
         m_shader.load("shaders/shadersGL3/Water");
