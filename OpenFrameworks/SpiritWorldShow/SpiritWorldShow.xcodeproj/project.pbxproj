@@ -14,6 +14,7 @@
 		059F15A57C00F89CF43FDDD6 /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE9EA26E2A646CE843DEEB1E /* ofxSmartFont.cpp */; };
 		08D7C5FE2073973A00AEF4DA /* ColorScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C5FD2073973A00AEF4DA /* ColorScene.cpp */; };
 		08D7C601207397CB00AEF4DA /* SparkleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C600207397CB00AEF4DA /* SparkleScene.cpp */; };
+		08D7C60A2073EB4F00AEF4DA /* EndScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C6082073EB4E00AEF4DA /* EndScene.cpp */; };
 		08E4B10720716E09008F5379 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E4B10620716E09008F5379 /* Syphon.framework */; };
 		08E4B10920716E6B008F5379 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08E4B10820716E6B008F5379 /* Syphon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		08E4B110207177FA008F5379 /* MeshScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08E4B10E207177FA008F5379 /* MeshScene.cpp */; };
@@ -162,6 +163,8 @@
 		08D7C5FD2073973A00AEF4DA /* ColorScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ColorScene.cpp; path = Scenes/ColorScene.cpp; sourceTree = "<group>"; };
 		08D7C5FF207397CB00AEF4DA /* SparkleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SparkleScene.h; path = Scenes/SparkleScene.h; sourceTree = "<group>"; };
 		08D7C600207397CB00AEF4DA /* SparkleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SparkleScene.cpp; path = Scenes/SparkleScene.cpp; sourceTree = "<group>"; };
+		08D7C6082073EB4E00AEF4DA /* EndScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EndScene.cpp; path = Scenes/EndScene.cpp; sourceTree = "<group>"; };
+		08D7C6092073EB4E00AEF4DA /* EndScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EndScene.h; path = Scenes/EndScene.h; sourceTree = "<group>"; };
 		08E4B10620716E09008F5379 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = src/Addons/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = "<group>"; };
 		08E4B10820716E6B008F5379 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = src/Addons/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = "<group>"; };
 		08E4B10E207177FA008F5379 /* MeshScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MeshScene.cpp; path = Scenes/MeshScene.cpp; sourceTree = "<group>"; };
@@ -1012,6 +1015,8 @@
 				08D7C5FC2073973A00AEF4DA /* ColorScene.h */,
 				08D7C600207397CB00AEF4DA /* SparkleScene.cpp */,
 				08D7C5FF207397CB00AEF4DA /* SparkleScene.h */,
+				08D7C6082073EB4E00AEF4DA /* EndScene.cpp */,
+				08D7C6092073EB4E00AEF4DA /* EndScene.h */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1419,6 +1424,7 @@
 				34CDB15CB0780633DAF598F9 /* OscManager.cpp in Sources */,
 				5D33A9513B2A4C6DBD3188C7 /* GuiManager.cpp in Sources */,
 				93510377552D47B6620A7586 /* LayoutManager.cpp in Sources */,
+				08D7C60A2073EB4F00AEF4DA /* EndScene.cpp in Sources */,
 				1AF15FCF93D2DDD6D4285C8E /* AppManager.cpp in Sources */,
 				DA22DA3A4F2E611DF50078F2 /* main.cpp in Sources */,
 				58BCEB4034B30CB4A3456FC7 /* SettingsManager.cpp in Sources */,

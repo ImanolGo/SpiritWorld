@@ -16,3 +16,4 @@
 #include "DotsScene.h"
 #include "ColorScene.h"
 #include "SparkleScene.h"
+#include "EndScene.h"

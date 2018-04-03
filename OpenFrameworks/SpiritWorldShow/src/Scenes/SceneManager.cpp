@@ -89,6 +89,10 @@ void SceneManager::createScenes()
     scene = ofPtr<ofxScene> (new SparkleScene());
     m_mySceneManager.addScene(scene);
     
+    //Create End Scene
+    scene = ofPtr<ofxScene> (new EndScene());
+    m_mySceneManager.addScene(scene);
+    
     
     float width = AppManager::getInstance().getSettingsManager().getAppWidth();
     float height = AppManager::getInstance().getSettingsManager().getAppHeight();
