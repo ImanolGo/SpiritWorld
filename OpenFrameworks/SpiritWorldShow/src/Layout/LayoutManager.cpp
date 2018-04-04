@@ -117,13 +117,20 @@ void LayoutManager::resetWindowRects()
         m_windowRect.height =  height - 2*MARGIN;
         m_windowRect.width  = m_windowRect.height*ratio;
         
-        m_previewWindowRect.width = m_windowRect.height;
-        m_previewWindowRect.height = m_windowRect.width;
+        if(m_windowRect.width*2 + 4*MARGIN > frame_width){
+            m_windowRect.width  = frame_width/2 - 2*MARGIN;
+            m_windowRect.height = m_windowRect.width/ratio;
+        }
         
-        m_windowRect.x = AppManager::getInstance().getGuiManager().getWidth() +  frame_width/2 - m_previewWindowRect.width/2   - MARGIN;
+        m_previewWindowRect.width = m_windowRect.width;
+        m_previewWindowRect.height = m_windowRect.height;
+        
+        
+        
+        m_windowRect.x = AppManager::getInstance().getGuiManager().getWidth() +  frame_width/2 - m_previewWindowRect.width + MARGIN;
         m_windowRect.y = ofGetHeight()*0.5 - m_windowRect.height/2;
         
-        m_previewWindowRect.x = AppManager::getInstance().getGuiManager().getWidth() +  frame_width/2 + m_previewWindowRect.width/2   + MARGIN;
+        m_previewWindowRect.x = AppManager::getInstance().getGuiManager().getWidth() +  frame_width/2  + 2*MARGIN;
         m_previewWindowRect.y =  ofGetHeight()*0.5 - m_previewWindowRect.height/2;
     }
     else
@@ -131,13 +138,18 @@ void LayoutManager::resetWindowRects()
         m_windowRect.height = ofGetHeight()/2 - 2*MARGIN; ;
         m_windowRect.width = m_windowRect.height*ratio;
         
+        if(m_windowRect.width + 2*MARGIN > frame_width){
+            m_windowRect.width  = frame_width - 2*MARGIN;
+            m_windowRect.height = m_windowRect.width/ratio;
+        }
+        
         m_previewWindowRect.width = m_windowRect.width;
         m_previewWindowRect.height =  m_windowRect.height;
         
-        m_windowRect.x =  AppManager::getInstance().getGuiManager().getWidth() +  frame_width/2 - m_previewWindowRect.width/2;
+        m_windowRect.x =  AppManager::getInstance().getGuiManager().getWidth() +  frame_width/2 - m_previewWindowRect.width/2 + 2*MARGIN;
         m_previewWindowRect.x = m_windowRect.x;
-        m_windowRect.y = ofGetHeight()/2 -  m_previewWindowRect.height/2 - MARGIN;
-        m_previewWindowRect.y = ofGetHeight()/2 +  m_previewWindowRect.height/2 - MARGIN;
+        m_windowRect.y = ofGetHeight()/2 -  m_previewWindowRect.height - MARGIN;
+        m_previewWindowRect.y = ofGetHeight()/2 + MARGIN;
         
         //m_windowRect.y + m_windowRect.height + 2*MARGIN  + m_textVisuals["Preview"]->getHeight();
     }
