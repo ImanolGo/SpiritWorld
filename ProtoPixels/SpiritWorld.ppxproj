@@ -32,6 +32,8 @@
                 <item>content:test</item>
                 <item>content:color</item>
                 <item>content:syphonIn</item>
+                <item>content:color 0</item>
+                <item>content:color 1</item>
             </items>
             <parameters>
                 <is_3D type="bool">0</is_3D>
@@ -520,6 +522,42 @@
                 <Syphon_Pipe type="stringoption">SpiritWorldShow-&gt;SpiritWorld</Syphon_Pipe>
             </parameters>
             <transformation type="matrix4x4">0.478297,        0,        0,        0&#x0A;       0, 0.837424,        0,        0&#x0A;       0,        0,        1,        0&#x0A;-0.12302, 0.717289,        0,        1</transformation>
+        </content>
+        <content>
+            <name>color 0</name>
+            <type>py:color</type>
+            <parameters>
+                <enabled type="bool">1</enabled>
+                <blend_mode type="stringoption">alpha</blend_mode>
+                <color_levels type="color">255, 255, 255, 255</color_levels>
+                <projection_type type="stringoption">flatsimple</projection_type>
+                <projection_parameters>
+                    <width type="float">1</width>
+                    <height type="float">1</height>
+                </projection_parameters>
+                <params>
+                    <color type="color">5, 22, 41, 255</color>
+                </params>
+            </parameters>
+            <transformation type="matrix4x4">0.0975413,        0,        0,        0&#x0A;       0, 0.0736098,        0,        0&#x0A;       0,        0,        1,        0&#x0A;-0.39468,   0.8646,        0,        1</transformation>
+        </content>
+        <content>
+            <name>color 1</name>
+            <type>py:color</type>
+            <parameters>
+                <enabled type="bool">1</enabled>
+                <blend_mode type="stringoption">alpha</blend_mode>
+                <color_levels type="color">255, 255, 255, 255</color_levels>
+                <projection_type type="stringoption">flatsimple</projection_type>
+                <projection_parameters>
+                    <width type="float">1</width>
+                    <height type="float">1</height>
+                </projection_parameters>
+                <params>
+                    <color type="color">5, 22, 41, 255</color>
+                </params>
+            </parameters>
+            <transformation type="matrix4x4">0.0793812,        0,        0,        0&#x0A;       0, 0.0343295,        0,        0&#x0A;       0,        0,        1,        0&#x0A; -0.2932,  0.88324,        0,        1</transformation>
         </content>
     </contents>
     <groups></groups>

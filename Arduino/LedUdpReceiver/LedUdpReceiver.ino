@@ -47,7 +47,7 @@
 #define DATA_PIN_2    18
 #define LED_TYPE    WS2812B
 #define COLOR_ORDER GRB
-#define NUM_LEDS 300
+#define NUM_LEDS 270
 CRGBArray<NUM_LEDS> leds1;
 CRGBArray<NUM_LEDS> leds2;
 
@@ -226,11 +226,11 @@ int checkProtocolHeaders(const unsigned char* messagein, int messagelength) {
   if ( messagein[0] == 0x10 && messagein[1] == 0x41 && messagein[2] == 0x37) { 
       // 0x41 = 'A'
       // 0x37 = '7'
-      //DEBUG_PRINT("Data Size: ");
+     //DEBUG_PRINT("Data Size: ");
       int data_size = BtoI((byte)messagein[3],(byte)messagein[4]); // number of values plus start code
       
      // messagein[3] * 256 + messagein[4]; // number of values plus start code
-      //DEBUG_PRINT_LN(data_size);
+     //DEBUG_PRINT_LN(data_size);
       //DEBUG_PRINT_LN(messagelength-HEADER_SIZE);
 
       if ( (messagelength-HEADER_SIZE) == data_size ) 

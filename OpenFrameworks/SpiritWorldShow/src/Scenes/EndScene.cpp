@@ -31,7 +31,7 @@ void ParticleEnd::setup()
 
 void ParticleEnd::setupImage()
 {
-    m_dotVisual.setResource("Brush");
+    m_dotVisual.setResource("Circle");
     m_dotVisual.setCentred(true);
     int size = 500;
     m_dotVisual.setWidth(size, true);
@@ -150,9 +150,10 @@ void EndScene::updateFbo()
     
     ofEnableAlphaBlending();
     m_fbo.begin();
-        ofSetColor(0, 0, 0, 5);
-        ofDrawRectangle(0, 0, width, height);
-        ofSetColor(255);
+//        ofSetColor(0, 0, 0, 5);
+//        ofDrawRectangle(0, 0, width, height);
+//        ofSetColor(255);
+     ofClear(0);
          this->drawParticles();
     m_fbo.end();
     ofDisableAlphaBlending();
