@@ -43,6 +43,7 @@ void GuiManager::setup()
     this->setupScenesGui();
     this->setupPresetsGui();
     this->setupGuiEvents();
+    this->setupEffects();
     this->loadGuiValues();
     
     ofLogNotice() <<"GuiManager::initialized";
@@ -161,6 +162,21 @@ void GuiManager::setupGuiEvents()
 void GuiManager::update()
 {
     m_gui.update();
+    this->updateEffects();
+}
+
+void GuiManager::updateEffects()
+{
+    if(!m_speedEffect->isFinished())
+    {
+        m_speed.set(m_speedVisual->getPosition().x);
+        ofLogNotice() <<"GuiManager::speed << " << m_speedVisual->getPosition().x;
+    }
+    
+    if(!m_sizeEffect->isFinished())
+    {
+        m_size.set(m_sizeVisual->getPosition().x);
+    }
 }
 
 void GuiManager::draw()
@@ -297,5 +313,41 @@ void GuiManager::onSceneChange(int sceneIndex)
     menu->setLabel(dropBoxName + ":" + label);
     AppManager::getInstance().getSceneManager().changeScene(sceneIndex);
 }
+
+void GuiManager::addSpeedEffect(float targetSpeed, double duration)
+{
+    AppManager::getInstance().getVisualEffectsManager().removeAllVisualEffects(m_speedVisual);
+    
+    m_speedEffect->stop();
+    m_speedEffect->setParameters(ofVec3f(m_speed.get(),0,0), ofVec3f(targetSpeed,0,0), duration);
+    m_speedEffect->start(0.0);
+    
+    AppManager::getInstance().getVisualEffectsManager().addVisualEffect(m_speedEffect);
+    ofLogNotice() <<"GuiManager::addSpeedEffect: size = " << targetSpeed << ", duration = " << duration;
+}
+
+
+void GuiManager::addSizeEffect(float targetSize, double duration)
+{
+   AppManager::getInstance().getVisualEffectsManager().removeAllVisualEffects(m_sizeVisual);
+    
+    m_sizeEffect->stop();
+    m_sizeEffect->setParameters(ofVec3f(m_speed.get(),0,0), ofVec3f(targetSize,0,0), duration);
+    m_sizeEffect->start(0.0);
+    
+    AppManager::getInstance().getVisualEffectsManager().addVisualEffect(m_sizeEffect);
+    
+    ofLogNotice() <<"GuiManager::addSizeEffect: size = " << targetSize << ", duration = " << duration;
+}
+
+void GuiManager::setupEffects()
+{
+    m_speedVisual =  ofPtr<BasicVisual>(new BasicVisual());
+    m_speedEffect = ofPtr<MoveVisual>(new MoveVisual(m_speedVisual));
+    
+    m_sizeVisual =  ofPtr<BasicVisual>(new BasicVisual());
+    m_sizeEffect = ofPtr<MoveVisual>(new MoveVisual(m_sizeVisual));
+}
+
 
 

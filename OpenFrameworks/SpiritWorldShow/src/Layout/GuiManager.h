@@ -12,6 +12,9 @@
 #include "Manager.h"
 #include "ofxDatGui.h"
 
+#include "BasicVisual.h"
+#include "VisualEffects.h"
+
 //========================== class GuiManager ==============================
 //============================================================================
 /** \class GuiManager GuiManager.h
@@ -101,6 +104,20 @@ public:
     
     float getContrast(){return m_contrast;}
     
+    void addSpeedEffect(float targetSpeed, double duration);
+    
+    void addSizeEffect(float targetSize, double duration);
+    
+    void setHue(float value) {m_hue = value;}
+    
+    void setSaturation(float value) {m_saturation = value;}
+    
+    void setValue(float value) {m_value = value;}
+    
+    void setSpeed(float value) {m_speed = value;}
+    
+    void setSize(float value) {m_size = value;}
+    
 private:
     
     void setupGuiParameters();
@@ -112,6 +129,10 @@ private:
     void setupGuiEvents();
     
     void drawRectangle();
+    
+    void setupEffects();
+    
+    void updateEffects();
     
 
 private:
@@ -131,6 +152,11 @@ private:
     ofParameter<float>      m_hue;
     ofParameter<float>      m_contrast;
     ofParameter<float>      m_alpha;
+    
+    ofPtr<BasicVisual>      m_speedVisual;
+    ofPtr<MoveVisual>       m_speedEffect;
+    ofPtr<BasicVisual>      m_sizeVisual;
+    ofPtr<MoveVisual>       m_sizeEffect;
     
     
    

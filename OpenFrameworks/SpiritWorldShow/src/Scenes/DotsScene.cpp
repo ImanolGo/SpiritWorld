@@ -181,7 +181,7 @@ void DotsScene::drawParticles()
 
 void DotsScene::willFadeIn() {
     ofLogNotice("DotsScene::willFadeIn");
-    AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
+    //AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
 }
 
 void DotsScene::willDraw() {
@@ -190,7 +190,7 @@ void DotsScene::willDraw() {
 
 void DotsScene::willFadeOut() {
     ofLogNotice("DotsScene::willFadeOut");
-    AppManager::getInstance().getGuiManager().savePresetsValues(getName());
+    //AppManager::getInstance().getGuiManager().savePresetsValues(getName());
 }
 
 void DotsScene::willExit() {

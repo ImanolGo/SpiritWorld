@@ -75,7 +75,60 @@ void OscManager::update()
             AppManager::getInstance().getGuiManager().onSceneChange(sceneName);
         }
         
-          //ofLogNotice() <<"OscManager::received -> " << this->getMessageAsString(m);
+        else if(m.getAddress() == OSC_PARENT_ADDRESS + "/Hue")
+        {
+            auto value = m.getArgAsString(0);
+            float fValue = ofToFloat(value);
+            AppManager::getInstance().getGuiManager().setHue(fValue);
+        }
+        
+        else if(m.getAddress() == OSC_PARENT_ADDRESS + "/Saturation")
+        {
+            auto value = m.getArgAsString(0);
+            float fValue = ofToFloat(value);
+            AppManager::getInstance().getGuiManager().setSaturation(fValue);
+        }
+        
+        else if(m.getAddress() == OSC_PARENT_ADDRESS + "/Value")
+        {
+            auto value = m.getArgAsString(0);
+            float fValue = ofToFloat(value);
+            AppManager::getInstance().getGuiManager().setValue(fValue);
+        }
+        
+        else if(m.getAddress() == OSC_PARENT_ADDRESS + "/Speed")
+        {
+            auto value = m.getArgAsString(0);
+            float fValue = ofToFloat(value);
+            AppManager::getInstance().getGuiManager().setSpeed(fValue);
+        }
+        
+        else if(m.getAddress() == OSC_PARENT_ADDRESS + "/Size")
+        {
+            auto value = m.getArgAsString(0);
+            float fValue = ofToFloat(value);
+            AppManager::getInstance().getGuiManager().setSize(fValue);
+        }
+        
+        else if(m.getAddress() == OSC_PARENT_ADDRESS + "/SpeedAnimation")
+        {
+            auto speed = m.getArgAsString(0);
+            float fSpeed = ofToFloat(speed);
+            auto time = m.getArgAsString(1);
+            float fTime = ofToFloat(time);
+            AppManager::getInstance().getGuiManager().addSpeedEffect(fSpeed, fTime);
+        }
+        
+        else if(m.getAddress() == OSC_PARENT_ADDRESS + "/SizeAnimation")
+        {
+            auto size = m.getArgAsString(0);
+            float fSize = ofToFloat(size);
+            auto time = m.getArgAsString(1);
+            float fTime = ofToFloat(time);
+            AppManager::getInstance().getGuiManager().addSizeEffect(fSize, fTime);
+        }
+        
+          ofLogNotice() <<"OscManager::received -> " << this->getMessageAsString(m);
     }
 }
 
