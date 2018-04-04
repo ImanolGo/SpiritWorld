@@ -60,6 +60,8 @@ public:
     
     const ofRectangle& getWindowRect() {return m_windowRect;}
     
+    const ofRectangle& getPrevWindowRect() {return m_previewWindowRect;}
+    
     void setFullScreen();
     
     const ofFbo& getCurrentFbo(){return m_fbo;}

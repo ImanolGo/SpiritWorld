@@ -69,6 +69,15 @@ public:
     //! Returns the  Scene Manager
     SceneManager&  getSceneManager() { return m_sceneManager; }
     
+    //! Returns the  Dress Manager
+    DressManager&  getDressManager() { return m_dressManager; }
+    
+    //! Returns the  Leds Manager
+    LedsManager&  getLedsManager() { return m_ledsManager; }
+    
+    //! Returns the  Udp Manager
+    UdpManager&  getUdpManager() { return m_udpManager; }
+    
     //==========================================================================
     
     void toggleDebugMode();
@@ -111,6 +120,9 @@ private:
     GuiManager               m_guiManager;               ///< Manages the graphical user interface
     OscManager               m_oscManager;               ///< Manages the OSC messages
     SceneManager             m_sceneManager;             ///< Manages all the scenes
+    LedsManager              m_ledsManager;              ///< Manages all the leds
+    UdpManager               m_udpManager;               ///< Manages the udp messages
+    DressManager             m_dressManager;             ///< Manages the dress
   
     bool                     m_debugMode;
 };

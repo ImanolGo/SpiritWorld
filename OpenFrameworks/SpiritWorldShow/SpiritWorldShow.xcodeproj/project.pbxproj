@@ -19,6 +19,10 @@
 		08D7C61E2074D90D00AEF4DA /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C6162074D90D00AEF4DA /* ofxTCPManager.cpp */; };
 		08D7C61F2074D90D00AEF4DA /* ofxTCPServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C6192074D90D00AEF4DA /* ofxTCPServer.cpp */; };
 		08D7C6202074D90D00AEF4DA /* ofxUDPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C61C2074D90D00AEF4DA /* ofxUDPManager.cpp */; };
+		08D7C62B20751ECE00AEF4DA /* DressManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C62520751ECE00AEF4DA /* DressManager.cpp */; };
+		08D7C62C20751ECE00AEF4DA /* LedsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C62620751ECE00AEF4DA /* LedsManager.cpp */; };
+		08D7C62D20751ECE00AEF4DA /* Led.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C62920751ECE00AEF4DA /* Led.cpp */; };
+		08D7C6302075200900AEF4DA /* UdpManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C62E2075200800AEF4DA /* UdpManager.cpp */; };
 		08E4B10720716E09008F5379 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E4B10620716E09008F5379 /* Syphon.framework */; };
 		08E4B10920716E6B008F5379 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08E4B10820716E6B008F5379 /* Syphon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		08E4B110207177FA008F5379 /* MeshScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08E4B10E207177FA008F5379 /* MeshScene.cpp */; };
@@ -179,6 +183,14 @@
 		08D7C61A2074D90D00AEF4DA /* ofxNetworkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxNetworkUtils.h; path = ../../../../../../../../Applications/of_v0.9.8_osx_release/addons/ofxNetwork/src/ofxNetworkUtils.h; sourceTree = "<group>"; };
 		08D7C61B2074D90D00AEF4DA /* ofxUDPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxUDPManager.h; path = ../../../../../../../../Applications/of_v0.9.8_osx_release/addons/ofxNetwork/src/ofxUDPManager.h; sourceTree = "<group>"; };
 		08D7C61C2074D90D00AEF4DA /* ofxUDPManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxUDPManager.cpp; path = ../../../../../../../../Applications/of_v0.9.8_osx_release/addons/ofxNetwork/src/ofxUDPManager.cpp; sourceTree = "<group>"; };
+		08D7C62520751ECE00AEF4DA /* DressManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DressManager.cpp; path = Dress/DressManager.cpp; sourceTree = "<group>"; };
+		08D7C62620751ECE00AEF4DA /* LedsManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LedsManager.cpp; path = Dress/LedsManager.cpp; sourceTree = "<group>"; };
+		08D7C62720751ECE00AEF4DA /* DressManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DressManager.h; path = Dress/DressManager.h; sourceTree = "<group>"; };
+		08D7C62820751ECE00AEF4DA /* Led.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Led.h; path = Dress/Led.h; sourceTree = "<group>"; };
+		08D7C62920751ECE00AEF4DA /* Led.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Led.cpp; path = Dress/Led.cpp; sourceTree = "<group>"; };
+		08D7C62A20751ECE00AEF4DA /* LedsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LedsManager.h; path = Dress/LedsManager.h; sourceTree = "<group>"; };
+		08D7C62E2075200800AEF4DA /* UdpManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UdpManager.cpp; path = I0/UdpManager.cpp; sourceTree = "<group>"; };
+		08D7C62F2075200800AEF4DA /* UdpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UdpManager.h; path = I0/UdpManager.h; sourceTree = "<group>"; };
 		08E4B10620716E09008F5379 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = src/Addons/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = "<group>"; };
 		08E4B10820716E6B008F5379 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = src/Addons/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = "<group>"; };
 		08E4B10E207177FA008F5379 /* MeshScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MeshScene.cpp; path = Scenes/MeshScene.cpp; sourceTree = "<group>"; };
@@ -444,6 +456,8 @@
 				0E17290758600C060256DA40 /* MouseManager.h */,
 				3AA1AC164C5A14E8FB05048E /* OscManager.cpp */,
 				D1C77A5B38BC862739AEC400 /* OscManager.h */,
+				08D7C62E2075200800AEF4DA /* UdpManager.cpp */,
+				08D7C62F2075200800AEF4DA /* UdpManager.h */,
 			);
 			name = I0;
 			sourceTree = "<group>";
@@ -471,6 +485,19 @@
 				08D7C61B2074D90D00AEF4DA /* ofxUDPManager.h */,
 			);
 			name = src;
+			sourceTree = "<group>";
+		};
+		08D7C62420751EB800AEF4DA /* Dress */ = {
+			isa = PBXGroup;
+			children = (
+				08D7C62520751ECE00AEF4DA /* DressManager.cpp */,
+				08D7C62720751ECE00AEF4DA /* DressManager.h */,
+				08D7C62920751ECE00AEF4DA /* Led.cpp */,
+				08D7C62820751ECE00AEF4DA /* Led.h */,
+				08D7C62620751ECE00AEF4DA /* LedsManager.cpp */,
+				08D7C62A20751ECE00AEF4DA /* LedsManager.h */,
+			);
+			name = Dress;
 			sourceTree = "<group>";
 		};
 		08E4B10520716E08008F5379 /* Frameworks */ = {
@@ -1187,6 +1214,7 @@
 				375D8B140B52B55EB32EB487 /* Layout */,
 				AF4FDCF7E02C59FCC5FE54A2 /* Main */,
 				C9A8C2EA34B35E4BED69D33C /* Scenes */,
+				08D7C62420751EB800AEF4DA /* Dress */,
 				C02C33831C66F04FEBAE29DE /* Visuals */,
 			);
 			path = src;
@@ -1394,8 +1422,10 @@
 				63A90FF94CFD24B528DBEF66 /* icon-radio-off.png in Sources */,
 				5057E92136F67CEB60A9CFE8 /* icon-radio-on.png in Sources */,
 				6F6BBB4756484E68AB2208D7 /* picker-rainbow.png in Sources */,
+				08D7C6302075200900AEF4DA /* UdpManager.cpp in Sources */,
 				209D83A65C0D547E3D4F62A5 /* readme.md in Sources */,
 				86973836275DBDFE10FC4D07 /* roadmap.md in Sources */,
+				08D7C62B20751ECE00AEF4DA /* DressManager.cpp in Sources */,
 				DF2764E1860DD2D324923A1D /* ofxDatGuiComponent.cpp in Sources */,
 				059F15A57C00F89CF43FDDD6 /* ofxSmartFont.cpp in Sources */,
 				49EE14834E328B244122B5DE /* ofxDatGui.cpp in Sources */,
@@ -1431,6 +1461,7 @@
 				15FA0788DED9B05645862A3D /* ofxEasingCubic.cpp in Sources */,
 				83C6F105ADF7915F226EAE94 /* ofxEasingElastic.cpp in Sources */,
 				46A50237177AED3C6967ABE5 /* ofxEasingExpo.cpp in Sources */,
+				08D7C62C20751ECE00AEF4DA /* LedsManager.cpp in Sources */,
 				F77B2C294EBE453D7DDA0F6E /* ofxEasingLinear.cpp in Sources */,
 				4D5BF349E2CCE75A3A8DD44E /* ofxEasingQuad.cpp in Sources */,
 				D5EA12B4B76735462D05E4F0 /* ofxEasingQuart.cpp in Sources */,
@@ -1450,6 +1481,7 @@
 				6F36C225B48477DFCCA6FB64 /* ResourceManager.cpp in Sources */,
 				68A59FFAF8D6A1C715A69CD4 /* EngineFont.cpp in Sources */,
 				3A6C7D72771284673CBE247D /* ImageVisual.cpp in Sources */,
+				08D7C62D20751ECE00AEF4DA /* Led.cpp in Sources */,
 				F7EA3801298F5E54967C119B /* ImageVisual3D.cpp in Sources */,
 				08E4B11720724321008F5379 /* DotsScene.cpp in Sources */,
 				DEBDF1F781CA34214BEBD185 /* RectangleVisual.cpp in Sources */,

@@ -54,6 +54,10 @@ public:
     
     int getOscPortReceive() const {return m_portOscReceive;}
     
+    int getUdpPortSend() const {return m_portUdpSend;}
+    
+    string getUdpIpAddress() const {return m_udpIpAddress;}
+    
     string getSyphonName() const {return m_syphonName;}
 
     
@@ -100,7 +104,9 @@ private:
     float                   m_appHeight;            ///< stores the applications height
     int                     m_portOscSend;          ///< stores the OSC port used for the OSC Sending communications
     int                     m_portOscReceive;       ///< stores the OSC port used for the OSC Receiving communications
+    int                     m_portUdpSend;         ///< stores the Udp port used for the UDP Sending communications
     string                  m_ipAddress;            ///< stores the Ip Address used for the Network communications
+    string                  m_udpIpAddress;
     string                  m_syphonName;           ///<stores the name of the syphon pipe name
     
 };

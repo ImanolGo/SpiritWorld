@@ -90,7 +90,7 @@ void LedsManager::createLedsPosition()
 
 void LedsManager::addLed(const ofPoint& position, int index)
 {
-    ofRectangle windowRect = AppManager::getInstance().getDressManager().getWindowRect();
+    ofRectangle windowRect = AppManager::getInstance().getLayoutManager().getPrevWindowRect();
     createLed(position, index);
     
     if (!m_leds[index].empty()) {
@@ -234,7 +234,7 @@ void LedsManager::removeCharsFromString( string &str, char* charsToRemove ) {
 void LedsManager::update()
 {
     ofPixels pixels;
-    AppManager::getInstance().getVideoOutputManager().getVideoFbo().readToPixels(pixels);
+    AppManager::getInstance().getLayoutManager().getCurrentFbo().readToPixels(pixels);
     this->setPixels(pixels);
 }
 

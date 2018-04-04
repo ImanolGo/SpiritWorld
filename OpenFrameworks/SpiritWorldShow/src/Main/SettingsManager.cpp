@@ -147,7 +147,9 @@ void SettingsManager::setNetworkProperties()
         m_portOscReceive  = ofToInt(attributes["portOscReceive"]);
         m_ipAddress  = ofToString(attributes["ipAddress"]);
         m_syphonName = ofToString(attributes["syphon"]);
-
+        
+        m_udpIpAddress = ofToString(attributes["ipUdp"]);
+        m_portUdpSend = ofToInt(attributes["portUdpSend"]);
         
         ofLogNotice() <<"SettingsManager::setNetworkProperties->  successfully loaded the network settings" ;
         return;

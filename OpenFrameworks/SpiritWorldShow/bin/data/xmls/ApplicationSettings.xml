@@ -5,9 +5,9 @@
 
      <!--  <window title="Spirit World" x="0" y="0" width="650" height="1267" fullscreen="0" showCursor="1"/> -->
     
-      <window title="Spirit World" x="0" y="0" width="960" height="600" fullscreen="0" showCursor="1"/>
+      <window title="Spirit World" x="0" y="0" width="650" height="1267" fullscreen="0" showCursor="1"/>
       <debug showCursor="1" setVerbose="1"/>
-      <network ip="127.0.0.1"  portOscSend="7890" portOscReceive="7001" syphon="SpiritWorld"/>
+      <network ip="127.0.0.1" ipUdp = "192.168.0.21" portOscSend="7890" portOscReceive="7001" portUdpSend="2390" syphon="SpiritWorld"/>
 
   </of_settings>
 
@@ -15,6 +15,7 @@
 
     <texture name="Brush" path="images/general/brush.png"/>
     <texture name="Circle" path="images/general/circle.png"/>
+    <texture name="DressLayout" path="images/dress/spiritworld_leds_base.png"/>
 
   </textures>
 

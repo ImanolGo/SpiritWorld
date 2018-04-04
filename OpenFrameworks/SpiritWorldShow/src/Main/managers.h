@@ -22,3 +22,6 @@
 #include "OscManager.h"
 #include "SceneManager.h"
 #include "NoiseManager.h"
+#include "LedsManager.h"
+#include "DressManager.h"
+#include "UdpManager.h"

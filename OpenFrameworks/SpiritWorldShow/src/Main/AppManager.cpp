@@ -66,12 +66,16 @@ void AppManager::setupManagers()
     m_resourceManager.setup();
     m_viewManager.setup();
     m_visualEffectsManager.setup();
+    m_dressManager.setup();
     m_layoutManager.setup();
     m_keyboardManager.setup();
     m_mouseManager.setup();
     m_sceneManager.setup();
+    m_ledsManager.setup();
     m_oscManager.setup();
+    m_udpManager.setup();
     m_guiManager.setup();
+    
 }
 
 void AppManager::update()
@@ -81,6 +85,8 @@ void AppManager::update()
     m_visualEffectsManager.update();
     m_viewManager.update();
     m_layoutManager.update();
+    m_ledsManager.update();
+    m_udpManager.update();
     m_guiManager.update();
 }
 

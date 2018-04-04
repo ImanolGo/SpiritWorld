@@ -110,21 +110,20 @@ void LayoutManager::resetWindowRects()
     float width = AppManager::getInstance().getSettingsManager().getAppWidth();
     float height  = AppManager::getInstance().getSettingsManager().getAppHeight();
     float ratio = width/ height;
-    float frame_width = ofGetWidth() - AppManager::getInstance().getGuiManager().getWidth() - 2*MARGIN;
+    float frame_width = ofGetWidth() - AppManager::getInstance().getGuiManager().getWidth();
     
-    if(frame_width >= ofGetHeight())
+    if(frame_width >=  AppManager::getInstance().getGuiManager().getWidth()*2 + 2*MARGIN)
     {
-        m_windowRect.height =  height - 2*MARGIN;
+        m_windowRect.height =  ofGetHeight() - 4*MARGIN;
         m_windowRect.width  = m_windowRect.height*ratio;
         
         if(m_windowRect.width*2 + 4*MARGIN > frame_width){
-            m_windowRect.width  = frame_width/2 - 2*MARGIN;
+            m_windowRect.width  = frame_width/2 - 3*MARGIN;
             m_windowRect.height = m_windowRect.width/ratio;
         }
         
         m_previewWindowRect.width = m_windowRect.width;
         m_previewWindowRect.height = m_windowRect.height;
-        
         
         
         m_windowRect.x = AppManager::getInstance().getGuiManager().getWidth() +  frame_width/2 - m_previewWindowRect.width + MARGIN;
@@ -138,15 +137,15 @@ void LayoutManager::resetWindowRects()
         m_windowRect.height = ofGetHeight()/2 - 2*MARGIN; ;
         m_windowRect.width = m_windowRect.height*ratio;
         
-        if(m_windowRect.width + 2*MARGIN > frame_width){
-            m_windowRect.width  = frame_width - 2*MARGIN;
+        if(m_windowRect.width + 4*MARGIN > frame_width){
+            m_windowRect.width  = frame_width - 3*MARGIN;
             m_windowRect.height = m_windowRect.width/ratio;
         }
         
         m_previewWindowRect.width = m_windowRect.width;
         m_previewWindowRect.height =  m_windowRect.height;
         
-        m_windowRect.x =  AppManager::getInstance().getGuiManager().getWidth() +  frame_width/2 - m_previewWindowRect.width/2 + 2*MARGIN;
+        m_windowRect.x =  AppManager::getInstance().getGuiManager().getWidth() +  frame_width/2 - m_previewWindowRect.width/2 + MARGIN;
         m_previewWindowRect.x = m_windowRect.x;
         m_windowRect.y = ofGetHeight()/2 -  m_previewWindowRect.height - MARGIN;
         m_previewWindowRect.y = ofGetHeight()/2 + MARGIN;
@@ -237,8 +236,8 @@ void LayoutManager::updatePreviewFbo()
 {
     ofEnableAlphaBlending();
     m_previewFbo.begin();
-    ofClear(0, 0, 0);
-    
+    ofClear(50, 50, 50);
+        AppManager::getInstance().getDressManager().draw(); 
     
     m_previewFbo.end();
     ofDisableAlphaBlending();
@@ -253,7 +252,7 @@ void LayoutManager::updateSyphon()
 
 void LayoutManager::createTextVisuals()
 {
-    float size = 20;
+    float size = 16;
     float w = size*50;
     float h = size;
     float x =  m_windowRect.x + m_windowRect.getWidth()*0.5;
@@ -280,13 +279,13 @@ void LayoutManager::createTextVisuals()
 void LayoutManager::resetWindowTitles()
 {
     float x =  m_windowRect.x + m_windowRect.getWidth()*0.5;
-    float y =  m_windowRect.y -  m_textVisuals["Output"]->getHeight()*0.5 + MARGIN;
+    float y =  m_windowRect.y - MARGIN/2;
     ofPoint pos = ofPoint(x, y);
     m_textVisuals["Output"]->setPosition(pos);
     
     
     pos.x =  m_previewWindowRect.x + m_previewWindowRect.getWidth()*0.5;
-    pos.y =  m_previewWindowRect.y - m_textVisuals["Preview"]->getHeight()*0.5  + MARGIN;
+    pos.y =  m_previewWindowRect.y - MARGIN/2;
     m_textVisuals["Preview"]->setPosition(pos);
 }
 

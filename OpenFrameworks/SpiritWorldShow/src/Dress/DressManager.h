@@ -11,7 +11,6 @@
 
 #include "Manager.h"
 #include "ImageVisual.h"
-#include "ofxScrollView.h"
 
 //========================== class DressManager ==============================
 //============================================================================
@@ -19,14 +18,6 @@
  *	\brief Class managing the dress visuals
  *	\details it creates and updates the dress visuals
  */
-
-
-typedef struct
-{
-    short field1;
-    short field2;
-    int field3;
-} HeaderStruct;
 
 
 class DressManager: public Manager
@@ -40,20 +31,18 @@ class DressManager: public Manager
         //! Destructor
         ~DressManager();
 
-        //! Setup the Halo Manager
+        //! Setup the Dress Manager
         void setup();
 
-        //! Update the Halo Manager
+        //! Update the Dress Manager
         void update();
     
-        //! Draw the Halo Manager
+        //! Draw the Dress Manager
         void draw();
     
         float getWidth() const {return m_costumeImage->getOriginalWidth();}
     
         float getHeight() const {return m_costumeImage->getOriginalHeight();}
-    
-        const ofRectangle& getWindowRect()  {return m_scrollView.getWindowRect();}
     
         void pressedAlt(bool isAltPressed) {m_isAltPressed = isAltPressed;}
     
@@ -68,18 +57,12 @@ class DressManager: public Manager
     
     private:
     
-        void setupImages();
-    
-        void setupBlur();
-    
-        void setupScrollView();
+        void setupImage();
     
         void drawCostumeLeds();
     
     
         ofPtr<ImageVisual>  m_costumeImage;
-    
-        ofxScrollView       m_scrollView;
     
         bool                m_isAltPressed;
         bool                m_isCtrlpressed;
