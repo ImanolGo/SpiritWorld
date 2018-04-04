@@ -13,7 +13,7 @@
 #include "AppManager.h"
 
 
-const string OscManager::OSC_PARENT_ADDRESS = "/PrimaveraSoundProto";
+const string OscManager::OSC_PARENT_ADDRESS = "/SpiritWorld";
 
 OscManager::OscManager(): Manager()
 {

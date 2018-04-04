@@ -23,6 +23,12 @@
  *	\details It creates an places al the text and elements regarding the layout
  */
 
+enum ScreenMode{
+    DRAW_NORMAL = 0,
+    DRAW_OUTPUT,
+    DRAW_PREVIEW
+};
+
 
 class LayoutManager: public Manager
 {
@@ -31,6 +37,7 @@ public:
     static const int MARGIN;
     static const int FRAME_MARGIN;
     static const string LAYOUT_FONT;
+    static const string LAYOUT_FONT_LIGHT;
     
     //! Constructor
     LayoutManager();
@@ -51,7 +58,19 @@ public:
     
     void windowResized(int w, int h);
     
+    const ofRectangle& getWindowRect() {return m_windowRect;}
+    
+    void setFullScreen();
+    
+    const ofFbo& getCurrentFbo(){return m_fbo;}
+    
     void setTitle(const string& title);
+    
+    void toggleDrawMode(int mode) {m_drawMode = mode;}
+    
+    void toggleDrawMode();
+    
+    int getDrawMode() {return m_drawMode;}
     
     
 private:
@@ -75,6 +94,12 @@ private:
     
     void setupShader();
     
+    void updateFbos();
+    
+    void updateOutputFbo();
+    
+    void updatePreviewFbo();
+    
     //! updates the syphon textture to be published
     void updateSyphon();
     
@@ -84,19 +109,27 @@ private:
     
     void setupFbo();
     
-    void resetWindowRect();
+    void drawOutput();
     
-    void resetWindowFrame();
+    void drawNormal();
     
-    void resetWindowTitle();
+    void drawPreview();
     
-    void setupWindowFrame();
+    void drawFbos();
     
-    void drawFbo();
+    void drawOutputFbo();
     
-    void drawRectangles();
+    void drawPreviewFbo();
     
     void drawText();
+    
+    void resetWindowRects();
+    
+    void resetWindowFrames();
+    
+    void resetWindowTitles();
+    
+    void setupWindowFrames();
     
 private:
     
@@ -109,9 +142,18 @@ private:
     TextMap             m_textVisuals;             ///< map storing the text visuals attached to a name
     SvgMap              m_svgVisuals;              ///< map storing the svg visuals attached to a name
     ImageMap            m_imageVisuals;            ///< map storing the image visuals attached to a name
+    
     ofRectangle         m_windowRect;
     RectangleVisual     m_windowFrame;
+    RectangleVisual     m_previewWindowFrame;
+    ofRectangle         m_previewWindowRect;
+    
+    int                 m_drawMode;
+    
     ofFbo               m_fbo;
+    ofFbo               m_previewFbo;
+    ofColor             m_color;
+    
     ofFbo               m_fboColor;
     ofxSyphonServer     m_syphonServer;
     ofShader            m_shader;

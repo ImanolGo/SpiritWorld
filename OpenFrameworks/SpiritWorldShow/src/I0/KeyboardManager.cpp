@@ -82,6 +82,29 @@ void KeyboardManager::keyPressed(ofKeyEventArgs &e)
     if(key == '7') {
         AppManager::getInstance().getSceneManager().changeScene("END");
     }
+    
+    if(key == 'f' || key == 'F') {
+        AppManager::getInstance().getLayoutManager().toggleDrawMode(1);
+    }
+    
+    
+    if(key == 'p' || key == 'P') {
+        AppManager::getInstance().getLayoutManager().toggleDrawMode(2);
+    }
+    
+    if(key == 'n' || key == 'N') {
+        AppManager::getInstance().getLayoutManager().toggleDrawMode(0);
+    }
+    
+    if(key == ' ') {
+        AppManager::getInstance().getLayoutManager().toggleDrawMode();
+        if(AppManager::getInstance().getLayoutManager().getDrawMode() == 0){
+            AppManager::getInstance().getGuiManager().showGui(true);
+        }
+        else{
+            AppManager::getInstance().getGuiManager().showGui(false);
+        }
+    }
 
     
 }

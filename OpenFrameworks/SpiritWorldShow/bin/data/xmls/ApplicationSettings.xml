@@ -3,8 +3,9 @@
 
   <of_settings>
 
-      <window title="Spirit World" x="0" y="0" width="960" height="600" fullscreen="0" showCursor="1"/>
-
+     <!--  <window title="Spirit World" x="0" y="0" width="650" height="1267" fullscreen="0" showCursor="1"/> -->
+    
+       <window title="Spirit World" x="0" y="0" width="960" height="600" fullscreen="0" showCursor="1"/>
       <debug showCursor="1" setVerbose="1"/>
       <network ip="127.0.0.1"  portOscSend="7890" portOscReceive="50001" syphon="SpiritWorld"/>
 
