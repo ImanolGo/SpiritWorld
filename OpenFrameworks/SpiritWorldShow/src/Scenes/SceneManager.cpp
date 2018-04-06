@@ -57,6 +57,10 @@ void SceneManager::createScenes()
     scene = ofPtr<ofxScene> (new ColorScene());
     m_mySceneManager.addScene(scene);
     
+    //Create Color Scene
+    scene = ofPtr<ofxScene> (new BreathScene());
+    m_mySceneManager.addScene(scene);
+    
     //Create Video Scene
     scene = ofPtr<ofxScene> (new VideoScene("ABSTRACT"));
     m_mySceneManager.addScene(scene);

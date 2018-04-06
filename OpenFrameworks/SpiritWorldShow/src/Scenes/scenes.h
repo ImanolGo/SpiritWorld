@@ -17,3 +17,4 @@
 #include "ColorScene.h"
 #include "SparkleScene.h"
 #include "EndScene.h"
+#include "BreathScene.h"

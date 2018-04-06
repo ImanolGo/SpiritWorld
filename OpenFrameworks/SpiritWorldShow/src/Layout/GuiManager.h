@@ -168,6 +168,7 @@ private:
     ofParameter<float>      m_audioDecay;
     ofParameter<float>      m_audioVolume;
     ofParameter<float>      m_audioPower;
+    ofParameter<int>        m_audioNumPeaks;
     
     ofPtr<BasicVisual>      m_speedVisual;
     ofPtr<MoveVisual>       m_speedEffect;

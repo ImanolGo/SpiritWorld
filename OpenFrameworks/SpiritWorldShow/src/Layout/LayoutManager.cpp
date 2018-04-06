@@ -200,8 +200,9 @@ void LayoutManager::updateOutputFbo()
 {
     auto hue = AppManager::getInstance().getGuiManager().getHue();
     auto saturation = AppManager::getInstance().getGuiManager().getSaturation();
+    auto audio = AppManager::getInstance().getAudioManager().getAudioMax();
     auto value = AppManager::getInstance().getGuiManager().getValue();
-    ofColor color; color.setHsb(hue, saturation, value);
+    ofColor color; color.setHsb(hue, saturation, value*audio);
     
     auto brightness = AppManager::getInstance().getGuiManager().getBrightness();
     auto contrast = AppManager::getInstance().getGuiManager().getContrast();

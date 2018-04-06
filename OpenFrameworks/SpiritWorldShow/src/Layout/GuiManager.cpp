@@ -104,6 +104,10 @@ void GuiManager::setupAudioGui()
     m_audioVolume.addListener(audioManager, &AudioManager::onChangeVolume);
     m_parameters.add(m_audioVolume);
     
+    m_audioNumPeaks.set("FftBins", 5, 0, 20);
+    m_audioNumPeaks.addListener(audioManager, &AudioManager::onChangeNumPeaks);
+    m_parameters.add(m_audioNumPeaks);
+    
     m_audioPower.set("Power", 0.0, 0.0, 1.0);
     m_parameters.add(m_audioPower);
     
@@ -114,6 +118,7 @@ void GuiManager::setupAudioGui()
     
     folder->addSlider(m_audioDecay);
     folder->addSlider(m_audioVolume);
+    folder->addSlider(m_audioNumPeaks);
     folder->addSlider(m_audioPower);
     folder->expand();
     m_gui.addBreak();

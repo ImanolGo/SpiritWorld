@@ -17,6 +17,7 @@
 		08678A0420777FDA007FF490 /* ofxFFTBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08678A0020777FDA007FF490 /* ofxFFTBase.cpp */; };
 		08678A0520777FDA007FF490 /* ofxFFTLive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08678A0120777FDA007FF490 /* ofxFFTLive.cpp */; };
 		08678A0920777FEA007FF490 /* fft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08678A0720777FEA007FF490 /* fft.cpp */; };
+		08A749A12077CC36000D466B /* BreathScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08A7499F2077CC36000D466B /* BreathScene.cpp */; };
 		08D7C5FE2073973A00AEF4DA /* ColorScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C5FD2073973A00AEF4DA /* ColorScene.cpp */; };
 		08D7C601207397CB00AEF4DA /* SparkleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C600207397CB00AEF4DA /* SparkleScene.cpp */; };
 		08D7C60A2073EB4F00AEF4DA /* EndScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7C6082073EB4E00AEF4DA /* EndScene.cpp */; };
@@ -181,6 +182,8 @@
 		08678A0220777FDA007FF490 /* ofxFFTBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxFFTBase.h; path = Addons/ofxFFT/src/ofxFFTBase.h; sourceTree = "<group>"; };
 		08678A0720777FEA007FF490 /* fft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fft.cpp; path = Addons/ofxFFT/libs/fft.cpp; sourceTree = "<group>"; };
 		08678A0820777FEA007FF490 /* fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fft.h; path = Addons/ofxFFT/libs/fft.h; sourceTree = "<group>"; };
+		08A7499F2077CC36000D466B /* BreathScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BreathScene.cpp; path = Scenes/BreathScene.cpp; sourceTree = "<group>"; };
+		08A749A02077CC36000D466B /* BreathScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BreathScene.h; path = Scenes/BreathScene.h; sourceTree = "<group>"; };
 		08C5194B0C92DDA2A7539395 /* core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = core.h; path = src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8/core.h; sourceTree = SOURCE_ROOT; };
 		08D7C5FC2073973A00AEF4DA /* ColorScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorScene.h; path = Scenes/ColorScene.h; sourceTree = "<group>"; };
 		08D7C5FD2073973A00AEF4DA /* ColorScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ColorScene.cpp; path = Scenes/ColorScene.cpp; sourceTree = "<group>"; };
@@ -1121,6 +1124,8 @@
 			children = (
 				3C4EA15C90BCFE1FFC1245B1 /* BlankScene.cpp */,
 				94B476E65081D2D5CE6D1228 /* BlankScene.h */,
+				08A7499F2077CC36000D466B /* BreathScene.cpp */,
+				08A749A02077CC36000D466B /* BreathScene.h */,
 				1A14124BF720E4CA8987CC24 /* SceneManager.cpp */,
 				76C4479895B14357D331E849 /* SceneManager.h */,
 				8C488F38001D542DA27140DF /* scenes.h */,
@@ -1511,6 +1516,7 @@
 				D8F3E21A9080C5C5C92502F4 /* LICENSE in Sources */,
 				08678A0320777FDA007FF490 /* ofxFFTFile.cpp in Sources */,
 				5D1F53DABA228656FC2F9630 /* README in Sources */,
+				08A749A12077CC36000D466B /* BreathScene.cpp in Sources */,
 				706AD932A4A8897398E27902 /* easing_terms_of_use.html in Sources */,
 				BB510419376F489E3A3371C7 /* ofxEasing.cpp in Sources */,
 				E8FCFBD2BB05D10A257C49CA /* ofxEasingBack.cpp in Sources */,

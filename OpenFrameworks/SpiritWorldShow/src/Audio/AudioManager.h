@@ -62,6 +62,8 @@ private:
     
     void drawCircle();
     
+    float getMaxSound();
+    
     
 private:
     
