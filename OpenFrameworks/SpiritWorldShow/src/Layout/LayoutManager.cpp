@@ -186,7 +186,7 @@ void LayoutManager::update()
         return;
     
     this->updateFbos();
-    this->updateSyphon();
+    //this->updateSyphon();
     
 }
 

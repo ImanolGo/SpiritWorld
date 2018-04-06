@@ -1,3 +1,5 @@
 <group>
-	<TransitionTime>0.94</TransitionTime>
+	<TransitionTime>0.5</TransitionTime>
+	<Decay>0.94</Decay>
+	<Volume>0.0523288</Volume>
 </group>

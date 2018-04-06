@@ -11,7 +11,7 @@
 #include "AppManager.h"
 
 
-UdpManager::UdpManager(): Manager()
+UdpManager::UdpManager(): Manager(), m_isUdp2Sending(false)
 {
     //Intentionally left empty
 }
@@ -56,7 +56,15 @@ void UdpManager::setupUdp()
     m_udpConnection.Connect(ip.c_str(),port);
     m_udpConnection.SetNonBlocking(true);
     
+    string ip2 = AppManager::getInstance().getSettingsManager().getUdpIpAddress2();
+    m_udpConnection2.Create();
+    m_udpConnection2.Connect(ip2.c_str(),port);
+    m_udpConnection2.SetNonBlocking(true);
+    
+
     ofLogNotice() <<"UdpManager::setupUdp << Connecting to ip address: " << ip << ", port " << port;
+    
+    ofLogNotice() <<"UdpManager::setupUdp << Connecting to ip address 2: " << ip2 << ", port " << port;
 
 }
 
@@ -82,6 +90,13 @@ void UdpManager::update()
     }
 
     m_udpConnection.Send(message.c_str(),message.length());
+    if(m_isUdp2Sending){
+         m_udpConnection2.Send(message.c_str(),message.length());
+    }
+    else{
+        this->sendBlackUdp2();
+    }
+   
     
     index = 1;
     message.clear();
@@ -104,4 +119,37 @@ void UdpManager::update()
 
      m_udpConnection.Send(message.c_str(),message.length());
 
+}
+
+void UdpManager::setUdp2Sending(bool value)
+{
+    m_isUdp2Sending = value;
+    if(!m_isUdp2Sending){
+        this->sendBlackUdp2();
+    }
+}
+
+void UdpManager::sendBlackUdp2()
+{
+    const auto & leds = AppManager::getInstance().getLedsManager().getLeds();
+    //    const int length = leds.size()*3;
+    //    const char* pixels[length];
+    
+    string message="";
+    int index = 0;
+    message+= m_header.f1; message+= m_header.f2; message+= m_header.f3;
+    m_header.size = 3*leds[index].size();
+    unsigned char * s = (unsigned char*)& m_header.size;
+    message+= s[1] ;  message+=  s[0];
+    message+=m_header.channel;
+    
+    ofColor black = ofColor::black;
+    for(int i = 0; i< leds[index].size(); i++)
+    {
+        message+=black.r;
+        message+=black.g;
+        message+=black.b;
+    }
+    
+    m_udpConnection2.Send(message.c_str(),message.length());
 }

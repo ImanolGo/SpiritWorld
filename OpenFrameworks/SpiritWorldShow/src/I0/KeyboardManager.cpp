@@ -55,37 +55,37 @@ void KeyboardManager::keyPressed(ofKeyEventArgs &e)
         AppManager::getInstance().getSceneManager().changeScene("BLANK");
     }
     
-    if(key == '1') {
-        AppManager::getInstance().getSceneManager().changeScene("WATER");
-    }
-    
-    if(key == '2') {
-        AppManager::getInstance().getSceneManager().changeScene("DOTS");
-    }
-    
-    if(key == '3') {
-        AppManager::getInstance().getSceneManager().changeScene("MESH");
-    }
-    
-    if(key == '4') {
-        AppManager::getInstance().getSceneManager().changeScene("EXPLOSION");
-    }
-    
-    if(key == '5') {
-        AppManager::getInstance().getSceneManager().changeScene("SPARKLES");
-    }
-    
-    if(key == '6') {
-        AppManager::getInstance().getSceneManager().changeScene("SPARKLES");
-    }
-    
-    if(key == '7') {
-        AppManager::getInstance().getSceneManager().changeScene("END");
-    }
-    
-    if(key == 'f' || key == 'F') {
-        AppManager::getInstance().getLayoutManager().toggleDrawMode(1);
-    }
+//    if(key == '1') {
+//        AppManager::getInstance().getSceneManager().changeScene("WATER");
+//    }
+//
+//    if(key == '2') {
+//        AppManager::getInstance().getSceneManager().changeScene("DOTS");
+//    }
+//
+//    if(key == '3') {
+//        AppManager::getInstance().getSceneManager().changeScene("MESH");
+//    }
+//
+//    if(key == '4') {
+//        AppManager::getInstance().getSceneManager().changeScene("EXPLOSION");
+//    }
+//
+//    if(key == '5') {
+//        AppManager::getInstance().getSceneManager().changeScene("SPARKLES");
+//    }
+//
+//    if(key == '6') {
+//        AppManager::getInstance().getSceneManager().changeScene("SPARKLES");
+//    }
+//
+//    if(key == '7') {
+//        AppManager::getInstance().getSceneManager().changeScene("END");
+//    }
+//
+//    if(key == 'f' || key == 'F') {
+//        AppManager::getInstance().getLayoutManager().toggleDrawMode(1);
+//    }
     
     
     if(key == 'p' || key == 'P') {

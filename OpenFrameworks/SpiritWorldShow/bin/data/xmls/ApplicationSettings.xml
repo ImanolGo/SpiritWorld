@@ -7,7 +7,7 @@
     
       <window title="Spirit World" x="0" y="0" width="650" height="1267" fullscreen="0" showCursor="1"/>
       <debug showCursor="1" setVerbose="1"/>
-      <network ip="127.0.0.1" ipUdp = "192.168.0.21" portOscSend="7890" portOscReceive="7001" portUdpSend="2390" syphon="SpiritWorld"/>
+      <network ip="127.0.0.1" ipUdp = "192.168.0.21" ipUdp2 = "192.168.0.22" portOscSend="7890" portOscReceive="7001" portUdpSend="2390" syphon="SpiritWorld"/>
 
   </of_settings>
 
@@ -24,6 +24,9 @@
     <video name="TEST_VIDEO" path="videos/video_test.mp4"/>
     <video name="CIRCLES" path="videos/CirclesLoop.mov"/> 
     <video name="EXPLOSION" path="videos/explosion.mov"/>
+    <video name="WIREFRAME" path="videos/WIREFRAME.mov"/>
+    <video name="ABSTRACT" path="videos/ABSTRACT.mp4"/>
+    
   </videos>
 
   <colors>

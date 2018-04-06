@@ -57,9 +57,13 @@ void SceneManager::createScenes()
     scene = ofPtr<ofxScene> (new ColorScene());
     m_mySceneManager.addScene(scene);
     
-//    //Create Video Scene
-//    scene = ofPtr<ofxScene> (new VideoScene("TEST_VIDEO"));
-//    m_mySceneManager.addScene(scene);
+    //Create Video Scene
+    scene = ofPtr<ofxScene> (new VideoScene("ABSTRACT"));
+    m_mySceneManager.addScene(scene);
+    
+    //Create Video Scene
+    scene = ofPtr<ofxScene> (new VideoScene("WIREFRAME"));
+    m_mySceneManager.addScene(scene);
     
     //Create Video Scene
     scene = ofPtr<ofxScene> (new VideoScene("EXPLOSION"));

@@ -41,7 +41,9 @@ void GuiManager::setup()
 
     this->setupGuiParameters();
     this->setupScenesGui();
+    this->setupCommunicationsGui();
     this->setupPresetsGui();
+    this->setupAudioGui();
     this->setupGuiEvents();
     this->setupEffects();
     this->loadGuiValues();
@@ -77,6 +79,45 @@ void GuiManager::setupGuiParameters()
     
     m_gui.addBreak();
     
+}
+
+void GuiManager::setupCommunicationsGui()
+{
+    ofxDatGuiFolder* folder = m_gui.addFolder("COMMUNICATIONS", ofColor::green);
+    folder->addToggle("Violin");
+    auto toggle = m_gui.getToggle("Violin");
+    toggle->setChecked(false);
+    
+    folder->expand();
+    m_gui.addBreak();
+}
+
+void GuiManager::setupAudioGui()
+{
+    auto audioManager = &AppManager::getInstance().getAudioManager();
+    
+    m_audioDecay.set("Decay", 0.8, 0.8, 1.0);
+    m_audioDecay.addListener(audioManager, &AudioManager::onChangeDecay);
+    m_parameters.add(m_audioDecay);
+    
+    m_audioVolume.set("Volume", 0.9, 0.0, 5.0);
+    m_audioVolume.addListener(audioManager, &AudioManager::onChangeVolume);
+    m_parameters.add(m_audioVolume);
+    
+    m_audioPower.set("Power", 0.0, 0.0, 1.0);
+    m_parameters.add(m_audioPower);
+    
+    ofxDatGuiFolder* folder = m_gui.addFolder("AUDIO", ofColor::pink);
+    folder->addToggle("Audio");
+    auto toggle = m_gui.getToggle("Audio");
+    toggle->setChecked(false);
+    
+    folder->addSlider(m_audioDecay);
+    folder->addSlider(m_audioVolume);
+    folder->addSlider(m_audioPower);
+    folder->expand();
+    m_gui.addBreak();
+
 }
 
 void GuiManager::setupPresetsGui()
@@ -285,8 +326,15 @@ void GuiManager::onToggleEvent(ofxDatGuiToggleEvent e)
         AppManager::getInstance().getLayoutManager().onFullScreenChange( e.target->getChecked());
     }
     
+    else if (e.target->getName() == "Violin"){
+        AppManager::getInstance().getUdpManager().setUdp2Sending( e.target->getChecked());
+    }
     
-   
+    else if (e.target->getName() == "Audio"){
+        bool audioOn = e.target->getChecked();
+        AppManager::getInstance().getAudioManager().onChangeAudioOn(audioOn);
+    }
+    
    
 }
 
@@ -347,6 +395,20 @@ void GuiManager::setupEffects()
     
     m_sizeVisual =  ofPtr<BasicVisual>(new BasicVisual());
     m_sizeEffect = ofPtr<MoveVisual>(new MoveVisual(m_sizeVisual));
+}
+
+
+void GuiManager::onChangeViolin(bool value)
+{
+    m_gui.getToggle("Violin")->setChecked(value);
+    AppManager::getInstance().getUdpManager().setUdp2Sending(value);
+}
+
+
+void GuiManager::onChangeAudio(bool value)
+{
+    m_gui.getToggle("Audio")->setChecked(value);
+    AppManager::getInstance().getAudioManager().onChangeAudioOn(value);
 }
 
 

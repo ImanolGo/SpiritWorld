@@ -10,7 +10,7 @@
 #include "MeshScene.h"
 #include "AppManager.h"
 
-MeshScene::MeshScene(): ofxScene("MESH"), m_meshWidth(12) ,m_meshHeight(10)
+MeshScene::MeshScene(): ofxScene("MESH"), m_meshWidth(8) ,m_meshHeight(14)
 {
      this->setupMesh();
 }

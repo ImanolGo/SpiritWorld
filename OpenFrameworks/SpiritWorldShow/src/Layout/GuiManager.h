@@ -118,6 +118,14 @@ public:
     
     void setSize(float value) {m_size = value;}
     
+    void setContrast(float value) {m_contrast = value;}
+    
+    void setAudioPower(float value) {m_audioPower = value;}
+    
+    void onChangeViolin(bool value);
+    
+    void onChangeAudio(bool value);
+    
 private:
     
     void setupGuiParameters();
@@ -125,6 +133,10 @@ private:
     void setupScenesGui();
     
     void setupPresetsGui();
+    
+    void setupCommunicationsGui();
+    
+    void setupAudioGui();
     
     void setupGuiEvents();
     
@@ -152,6 +164,10 @@ private:
     ofParameter<float>      m_hue;
     ofParameter<float>      m_contrast;
     ofParameter<float>      m_alpha;
+    
+    ofParameter<float>      m_audioDecay;
+    ofParameter<float>      m_audioVolume;
+    ofParameter<float>      m_audioPower;
     
     ofPtr<BasicVisual>      m_speedVisual;
     ofPtr<MoveVisual>       m_speedEffect;

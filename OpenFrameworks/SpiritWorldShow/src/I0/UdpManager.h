@@ -44,6 +44,8 @@ public:
     
     //! updates the udp manager
     void update();
+    
+    void setUdp2Sending(bool value);
 
 
 private:
@@ -52,11 +54,14 @@ private:
     
     void setupHeader();
     
+    void sendBlackUdp2();
+    
 private:
     
     ofxUDPManager m_udpConnection;
+    ofxUDPManager m_udpConnection2;
     udp_header    m_header;
-    
+    bool          m_isUdp2Sending;
     
 };
 

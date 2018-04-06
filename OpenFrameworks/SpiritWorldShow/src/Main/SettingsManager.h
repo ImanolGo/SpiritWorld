@@ -58,6 +58,8 @@ public:
     
     string getUdpIpAddress() const {return m_udpIpAddress;}
     
+    string getUdpIpAddress2() const {return m_udpIpAddress2;}
+
     string getSyphonName() const {return m_syphonName;}
 
     
@@ -107,6 +109,7 @@ private:
     int                     m_portUdpSend;         ///< stores the Udp port used for the UDP Sending communications
     string                  m_ipAddress;            ///< stores the Ip Address used for the Network communications
     string                  m_udpIpAddress;
+    string                  m_udpIpAddress2;
     string                  m_syphonName;           ///<stores the name of the syphon pipe name
     
 };

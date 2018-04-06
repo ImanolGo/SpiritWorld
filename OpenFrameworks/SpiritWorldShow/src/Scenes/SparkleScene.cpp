@@ -181,7 +181,7 @@ void SparkleScene::drawParticles()
 
 void SparkleScene::willFadeIn() {
     ofLogNotice("SparkleScene::willFadeIn");
-    AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
+   // AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
 }
 
 void SparkleScene::willDraw() {
@@ -190,7 +190,7 @@ void SparkleScene::willDraw() {
 
 void SparkleScene::willFadeOut() {
     ofLogNotice("SparkleScene::willFadeOut");
-    AppManager::getInstance().getGuiManager().savePresetsValues(getName());
+   // AppManager::getInstance().getGuiManager().savePresetsValues(getName());
 }
 
 void SparkleScene::willExit() {

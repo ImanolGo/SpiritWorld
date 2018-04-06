@@ -75,6 +75,28 @@ void OscManager::update()
             AppManager::getInstance().getGuiManager().onSceneChange(sceneName);
         }
         
+        else if(m.getAddress() == OSC_PARENT_ADDRESS + "/Violin")
+        {
+            auto value = m.getArgAsInt(0);
+            bool bValue = value > 0;
+            AppManager::getInstance().getGuiManager().onChangeViolin(bValue);
+        }
+        
+        else if(m.getAddress() == OSC_PARENT_ADDRESS + "/Audio")
+        {
+            auto value = m.getArgAsInt(0);
+            bool bValue = value > 0;
+            AppManager::getInstance().getGuiManager().onChangeAudio(bValue);
+        }
+        
+        else if(m.getAddress() == OSC_PARENT_ADDRESS + "/TransitionTime")
+        {
+            auto value = m.getArgAsString(0);
+            float fValue = ofToFloat(value);
+            AppManager::getInstance().getGuiManager().setSceneTransitionTime(fValue);
+        }
+        
+        
         else if(m.getAddress() == OSC_PARENT_ADDRESS + "/Hue")
         {
             auto value = m.getArgAsString(0);
@@ -108,6 +130,13 @@ void OscManager::update()
             auto value = m.getArgAsString(0);
             float fValue = ofToFloat(value);
             AppManager::getInstance().getGuiManager().setSize(fValue);
+        }
+        
+        else if(m.getAddress() == OSC_PARENT_ADDRESS + "/Contrast")
+        {
+            auto value = m.getArgAsString(0);
+            float fValue = ofToFloat(value);
+            AppManager::getInstance().getGuiManager().setContrast(fValue);
         }
         
         else if(m.getAddress() == OSC_PARENT_ADDRESS + "/SpeedAnimation")

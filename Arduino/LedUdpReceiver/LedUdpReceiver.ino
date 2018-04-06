@@ -41,9 +41,9 @@
 #endif
 
 #define LED_PIN    4
-//#define DATA_PIN_1    12
+#define DATA_PIN_1    12
 //#define DATA_PIN_2    18
-#define DATA_PIN_1    27
+//#define DATA_PIN_1    27
 #define DATA_PIN_2    18
 #define LED_TYPE    WS2812B
 #define COLOR_ORDER GRB
@@ -52,7 +52,7 @@ CRGBArray<NUM_LEDS> leds1;
 CRGBArray<NUM_LEDS> leds2;
 
 #define TEST_DELAY 600
-#define NO_DATA_TIME 5000
+#define NO_DATA_TIME 1000
 
 #define OUTPUT_CHANNEL 0
 #define HEADER_SIZE 6
@@ -72,7 +72,7 @@ const char ssid[]     = "TP-Link_9528";
 const char pass[] = "15419699";
 
 
-IPAddress ip(192, 168, 0, 21); //  Fixed IP
+IPAddress ip(192, 168, 0, 22); //  Fixed IP
 IPAddress gateway(192, 168, 0, 1); // set gateway to match your network
 IPAddress subnet(255, 255, 255, 0); // set subnet mask to match your network
 

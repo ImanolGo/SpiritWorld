@@ -27,6 +27,7 @@ void BlankScene::draw() {
 
 void BlankScene::willFadeIn() {
      ofLogNotice("BlankScene::willFadeIn");
+    //AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
 }
 
 void BlankScene::willDraw() {
@@ -39,4 +40,5 @@ void BlankScene::willFadeOut() {
 
 void BlankScene::willExit() {
     ofLogNotice("BlankScene::willExit");
+    //AppManager::getInstance().getGuiManager().savePresetsValues(getName());
 }

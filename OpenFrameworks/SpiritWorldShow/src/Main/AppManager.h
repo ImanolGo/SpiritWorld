@@ -78,6 +78,9 @@ public:
     //! Returns the  Udp Manager
     UdpManager&  getUdpManager() { return m_udpManager; }
     
+    //! Returns the Audio Manager
+    AudioManager&  getAudioManager() { return m_audioManager; }
+    
     //==========================================================================
     
     void toggleDebugMode();
@@ -123,6 +126,7 @@ private:
     LedsManager              m_ledsManager;              ///< Manages all the leds
     UdpManager               m_udpManager;               ///< Manages the udp messages
     DressManager             m_dressManager;             ///< Manages the dress
+    AudioManager             m_audioManager;             ///< Manages the audio
   
     bool                     m_debugMode;
 };

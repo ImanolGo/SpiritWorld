@@ -25,3 +25,4 @@
 #include "LedsManager.h"
 #include "DressManager.h"
 #include "UdpManager.h"
+#include "AudioManager.h"

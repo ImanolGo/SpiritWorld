@@ -23,7 +23,7 @@ VideoScene::~VideoScene()
 
 void VideoScene::setup() {
     ofLogNotice(getName() + "::setup");
-    //this->setupVideo();
+    this->setupVideo();
 }
 
 void VideoScene::setupVideo()
@@ -35,7 +35,8 @@ void VideoScene::setupVideo()
         string path = videoPaths.at(getName());
         m_videoPlayer.load(path);
         m_videoPlayer.setLoopState(OF_LOOP_NORMAL);
-        m_videoPlayer.play();
+       // m_videoPlayer.play();
+        m_videoPlayer.stop();
 
     }
     else{
@@ -82,12 +83,14 @@ void VideoScene::drawVideo()
 void VideoScene::willFadeIn() {
      ofLogNotice("VideoScene::willFadeIn");
     
-    AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
+    //AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
     
     if(m_videoPlayer.isInitialized() && m_videoPlayer.isLoaded())
     {
         m_videoPlayer.play();
     }
+    
+    m_videoPlayer.play();
 }
 
 void VideoScene::willDraw() {
@@ -96,7 +99,7 @@ void VideoScene::willDraw() {
 
 void VideoScene::willFadeOut() {
     ofLogNotice("VideoScene::willFadeOut");
-     AppManager::getInstance().getGuiManager().savePresetsValues(getName());
+     //AppManager::getInstance().getGuiManager().savePresetsValues(getName());
 }
 
 void VideoScene::willExit() {
@@ -104,4 +107,7 @@ void VideoScene::willExit() {
     {
         m_videoPlayer.stop();
     }
+    
+     m_videoPlayer.stop();
+     m_videoPlayer.close();
 }
