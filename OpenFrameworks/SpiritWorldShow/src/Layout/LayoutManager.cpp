@@ -54,7 +54,7 @@ void LayoutManager::setup()
     
     this->setupFbo();
     this->setupWindowFrames();
-    this->setupSyphon();
+    //this->setupSyphon();
     this->setupShader();
     
     this->createTextVisuals();

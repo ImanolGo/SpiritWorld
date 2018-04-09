@@ -45,7 +45,8 @@ private:
     
 private:
     
-    ofColor   m_color;
+    ofColor     m_color;
+    double      m_elapsedTime;
 
 };
 

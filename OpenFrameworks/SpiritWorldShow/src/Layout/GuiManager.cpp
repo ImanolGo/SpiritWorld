@@ -376,7 +376,7 @@ void GuiManager::addSpeedEffect(float targetSpeed, double duration)
     m_speedEffect->start(0.0);
     
     AppManager::getInstance().getVisualEffectsManager().addVisualEffect(m_speedEffect);
-    ofLogNotice() <<"GuiManager::addSpeedEffect: size = " << targetSpeed << ", duration = " << duration;
+    //ofLogNotice() <<"GuiManager::addSpeedEffect: size = " << targetSpeed << ", duration = " << duration;
 }
 
 
@@ -390,7 +390,7 @@ void GuiManager::addSizeEffect(float targetSize, double duration)
     
     AppManager::getInstance().getVisualEffectsManager().addVisualEffect(m_sizeEffect);
     
-    ofLogNotice() <<"GuiManager::addSizeEffect: size = " << targetSize << ", duration = " << duration;
+    //ofLogNotice() <<"GuiManager::addSizeEffect: size = " << targetSize << ", duration = " << duration;
 }
 
 void GuiManager::setupEffects()

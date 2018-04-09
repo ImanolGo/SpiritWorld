@@ -27,7 +27,7 @@ void ColorScene::draw() {
 
 void ColorScene::willFadeIn() {
      ofLogNotice("ColorScene::willFadeIn");
-     AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
+    // AppManager::getInstance().getGuiManager().loadPresetsValues(getName());
 }
 
 void ColorScene::willDraw() {
@@ -36,7 +36,7 @@ void ColorScene::willDraw() {
 
 void ColorScene::willFadeOut() {
     ofLogNotice("ColorScene::willFadeOut");
-     AppManager::getInstance().getGuiManager().savePresetsValues(getName());
+     //AppManager::getInstance().getGuiManager().savePresetsValues(getName());
 }
 
 void ColorScene::willExit() {

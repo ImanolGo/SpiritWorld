@@ -50,7 +50,7 @@ void AudioManager::update()
     if (!m_audioOn) {
         return;
     }
-    
+
     m_fft.update();
     
     m_audioMax = this->getMaxSound();

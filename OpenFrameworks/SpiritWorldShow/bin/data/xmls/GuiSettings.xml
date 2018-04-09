@@ -1,7 +1,7 @@
 <group>
-	<TransitionTime>0.72</TransitionTime>
-	<Decay>0.94</Decay>
-	<Volume>3.71</Volume>
-	<FftBins>9</FftBins>
-	<Power>0.226605</Power>
+	<TransitionTime>1.63</TransitionTime>
+	<Decay>0.88</Decay>
+	<Volume>0.81</Volume>
+	<FftBins>5</FftBins>
+	<Power>0.517151</Power>
 </group>
